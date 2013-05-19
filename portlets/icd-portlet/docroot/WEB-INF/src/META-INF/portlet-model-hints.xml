@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.virtusa.icd.service.builder.model.Enrollment">
+		<field name="enrollmentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="selectedEntityType" type="String" />
+		<field name="organizationNPINum" type="String" />
+		<field name="organizationName" type="String" />
+		<field name="organizationAddress1" type="String" />
+		<field name="organizationAddress2" type="String" />
+		<field name="organizationCity" type="String" />
+		<field name="organizationPhone" type="String" />
+		<field name="top5HealthPlansByRev" type="String" />
+		<field name="clearinghouses" type="String" />
+		<field name="ehrBillingVendors" type="String" />
+		<field name="revCycleVendors" type="String" />
+		<field name="top5DrgByRev" type="String" />
+		<field name="icd9Drg1" type="String" />
+		<field name="icd9Drg2" type="String" />
+		<field name="icd9Drg3" type="String" />
+		<field name="icd9Drg4" type="String" />
+		<field name="icd9Drg5" type="String" />
+		<field name="top5Icd9ByRev" type="String" />
+		<field name="icd9Dx1" type="String" />
+		<field name="icd9Dx2" type="String" />
+		<field name="icd9Dx3" type="String" />
+		<field name="icd9Dx4" type="String" />
+		<field name="icd9Dx5" type="String" />
+		<field name="primaryTestingContact" type="String" />
+		<field name="primaryTestingContactTitle" type="String" />
+		<field name="primaryTestingContactPhone" type="String" />
+		<field name="primaryTestingContactEmail" type="String" />
+		<field name="primaryCodingContact" type="String" />
+		<field name="primaryCodingContactTitle" type="String" />
+		<field name="primaryCodingContactPhone" type="String" />
+		<field name="primaryCodingContactEmail" type="String" />
+		<field name="primaryBillingContact" type="String" />
+		<field name="primaryBillingContactTitle" type="String" />
+		<field name="primaryBillingContactPhone" type="String" />
+		<field name="primaryBillingContactEmail" type="String" />
+		<field name="file" type="String" />
+	</model>
+</model-hints>

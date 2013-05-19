@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.virtusa.icd.service.builder.model.impl.EnrollmentModelImpl">
+		<attributes>
+			<id name="enrollmentId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="selectedEntityType" />
+			<basic name="organizationNPINum" />
+			<basic name="organizationName" />
+			<basic name="organizationAddress1" />
+			<basic name="organizationAddress2" />
+			<basic name="organizationCity" />
+			<basic name="organizationPhone" />
+			<basic name="top5HealthPlansByRev" />
+			<basic name="clearinghouses" />
+			<basic name="ehrBillingVendors" />
+			<basic name="revCycleVendors" />
+			<basic name="top5DrgByRev" />
+			<basic name="icd9Drg1" />
+			<basic name="icd9Drg2" />
+			<basic name="icd9Drg3" />
+			<basic name="icd9Drg4" />
+			<basic name="icd9Drg5" />
+			<basic name="top5Icd9ByRev" />
+			<basic name="icd9Dx1" />
+			<basic name="icd9Dx2" />
+			<basic name="icd9Dx3" />
+			<basic name="icd9Dx4" />
+			<basic name="icd9Dx5" />
+			<basic name="primaryTestingContact" />
+			<basic name="primaryTestingContactTitle" />
+			<basic name="primaryTestingContactPhone" />
+			<basic name="primaryTestingContactEmail" />
+			<basic name="primaryCodingContact" />
+			<basic name="primaryCodingContactTitle" />
+			<basic name="primaryCodingContactPhone" />
+			<basic name="primaryCodingContactEmail" />
+			<basic name="primaryBillingContact" />
+			<basic name="primaryBillingContactTitle" />
+			<basic name="primaryBillingContactPhone" />
+			<basic name="primaryBillingContactEmail" />
+			<basic name="file" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.virtusa.icd.service.builder.model.impl.EnrollmentImpl" name="Enrollment">
+		<table name="ICD_Enrollment" />
+		<attributes />
+	</entity>
+</entity-mappings>

@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.ICD", "com.virtusa.icd.service.builder.service", "icd-portlet");

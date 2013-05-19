@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.virtusa.icd.service.builder.model.Enrollment" />
+	<class name="com.virtusa.icd.service.builder.model.impl.EnrollmentImpl" table="ICD_Enrollment">
+		<cache usage="read-write" />
+		<id name="enrollmentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="selectedEntityType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organizationNPINum" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organizationName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organizationAddress1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organizationAddress2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organizationCity" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organizationPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="top5HealthPlansByRev" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="clearinghouses" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ehrBillingVendors" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="revCycleVendors" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="top5DrgByRev" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Drg1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Drg2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Drg3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Drg4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Drg5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="top5Icd9ByRev" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Dx1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Dx2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Dx3" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Dx4" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="icd9Dx5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryTestingContact" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryTestingContactTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryTestingContactPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryTestingContactEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryCodingContact" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryCodingContactTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryCodingContactPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryCodingContactEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryBillingContact" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryBillingContactTitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryBillingContactPhone" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="primaryBillingContactEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="file" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

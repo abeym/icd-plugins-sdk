@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="com.virtusa.icd.service.builder">
+    <namespace>ICD</namespace>
+    <entity name="Enrollment" local-service="true" remote-service="true">
+
+        <!-- PK fields -->
+
+        <column name="enrollmentId" type="long" primary="true" />
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long" />
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long" />
+        <column name="userId" type="long" />
+        <column name="userName" type="String" />
+        <column name="createDate" type="Date" />
+        <column name="modifiedDate" type="Date" />
+
+        <!-- Other fields -->
+
+        <column name="selectedEntityType" type="String" />
+        <column name="organizationNPINum" type="String" />
+        <column name="organizationName" type="String" />
+        <column name="organizationAddress1" type="String" />
+        <column name="organizationAddress2" type="String" />
+        <column name="organizationCity" type="String" />
+        <column name="organizationPhone" type="String" />
+        <column name="top5HealthPlansByRev" type="String" />
+        <column name="clearinghouses" type="String" />
+        <column name="ehrBillingVendors" type="String" />
+        <column name="revCycleVendors" type="String" />
+        <column name="top5DrgByRev" type="String" />
+        <column name="icd9Drg1" type="String" />
+        <column name="icd9Drg2" type="String" />
+        <column name="icd9Drg3" type="String" />
+        <column name="icd9Drg4" type="String" />
+        <column name="icd9Drg5" type="String" />
+        <column name="top5Icd9ByRev" type="String" />
+        <column name="icd9Dx1" type="String" />
+        <column name="icd9Dx2" type="String" />
+        <column name="icd9Dx3" type="String" />
+        <column name="icd9Dx4" type="String" />
+        <column name="icd9Dx5" type="String" />
+        <column name="primaryTestingContact" type="String" />
+        <column name="primaryTestingContactTitle" type="String" />
+        <column name="primaryTestingContactPhone" type="String" />
+        <column name="primaryTestingContactEmail" type="String" />
+        <column name="primaryCodingContact" type="String" />
+        <column name="primaryCodingContactTitle" type="String" />
+        <column name="primaryCodingContactPhone" type="String" />
+        <column name="primaryCodingContactEmail" type="String" />
+        <column name="primaryBillingContact" type="String" />
+        <column name="primaryBillingContactTitle" type="String" />
+        <column name="primaryBillingContactPhone" type="String" />
+        <column name="primaryBillingContactEmail" type="String" />
+        <column name="file" type="String" />
+    </entity>
+    
+    
+</service-builder>

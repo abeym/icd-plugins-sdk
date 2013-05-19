@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.virtusa.icd.service.builder.service.EnrollmentLocalService" class="com.virtusa.icd.service.builder.service.impl.EnrollmentLocalServiceImpl" />
+	<bean id="com.virtusa.icd.service.builder.service.EnrollmentService" class="com.virtusa.icd.service.builder.service.impl.EnrollmentServiceImpl" />
+	<bean id="com.virtusa.icd.service.builder.service.persistence.EnrollmentPersistence" class="com.virtusa.icd.service.builder.service.persistence.EnrollmentPersistenceImpl" parent="basePersistence" />
+</beans>

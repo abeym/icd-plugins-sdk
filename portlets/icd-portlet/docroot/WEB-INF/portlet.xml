@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<portlet-app version="1.0"
+             xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	         xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+	                             http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+
+   <portlet>
+      <portlet-name>enrollment</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/enrollment-portlet.xml</value>
+      </init-param>
+      <init-param>
+         <name>viewRendererUrl</name>
+         <value>/WEB-INF/servlet/view</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>Enrollment Portlet</title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
+      <portlet-name>mradmin</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/mradmin-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>Medical Records Administration Portlet</title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
+      <portlet-name>portalmanagement</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/portalmanagement-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>Portal Management Portlet</title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
+      <portlet-name>reporting</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/reporting-portlet.xml</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>Reporting Portlet</title>
+      </portlet-info>
+   </portlet>
+
+</portlet-app>
