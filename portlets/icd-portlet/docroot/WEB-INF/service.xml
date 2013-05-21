@@ -2,7 +2,7 @@
 <!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
 <service-builder package-path="com.virtusa.icd.service.builder">
     <namespace>ICD</namespace>
-    <entity name="Enrollment" local-service="true" remote-service="true">
+    <entity name="Enrollment" local-service="true" remote-service="true" data-source="icdDataSourceTarget">
 
         <!-- PK fields -->
 
@@ -60,7 +60,63 @@
         <column name="file" type="String" />
     </entity>
     
+	 <entity name="MedicalRecord" local-service="true" remote-service="true">
+
+        <!-- PK fields -->
+
+        <column name="mrId" type="long" primary="true" />
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long" />
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long" />
+        <column name="userId" type="long" />
+        <column name="userName" type="String" />
+        <column name="createDate" type="Date" />
+        <column name="modifiedDate" type="Date" />
+
+        <!-- Other fields -->
     
+		<column name="mrTestCaseName" type="String" />
+        <column name="msDrg" type="String" />
+        <column name="patientType" type="String" />
+        <column name="patientAge" type="String" />
+        <column name="los" type="String" />
+        <column name="ahrqCategoryCode" type="String" />
+        <column name="ahrqSubCategoryCode" type="String" />
+        <column name="mrTestCaseDescription" type="String" />
+        <column name="icd9AdmittingDx" type="String" />
+        <column name="icd9PrincipalDx" type="String" />
+        <column name="icd9PrincipalProcedure" type="String" />
+        <column name="otherIcd9Dx1" type="String" />
+        <column name="otherIcd9Dx2" type="String" />
+        <column name="otherIcd9Dx3" type="String" />
+        <column name="otherIcd9Pcs1" type="String" />
+        <column name="otherIcd9Pcs2" type="String" />
+        <column name="otherIcd9Pcs3" type="String" />
+        <column name="icd10AdmittingDx" type="String" />
+        <column name="icd10PrincipalDx" type="String" />
+        <column name="icd10PrincipalProcedure" type="String" />
+        <column name="otherIcd10Dx1" type="String" />
+        <column name="otherIcd10Dx2" type="String" />
+        <column name="otherIcd10Dx3" type="String" />
+        <column name="otherIcd10Pcs1" type="String" />
+        <column name="otherIcd10Pcs2" type="String" />
+        <column name="otherIcd10Pcs3" type="String" />
+        <column name="isHistoryAndPsysical" type="boolean" />
+        <column name="isDischargeNotes" type="boolean" />
+        <column name="isConsultations" type="boolean" />
+        <column name="isOperatingNotes" type="boolean" />
+        <column name="isPhysicianNotes" type="boolean" />
+        <column name="isRadiology" type="boolean" />
+        <column name="isGiProcedures" type="boolean" />
+        <column name="isEducationalNotes" type="boolean" />
+		<column name="file" type="String" />
+	</entity>
+
     <entity name="References" local-service="true" remote-service="true">
         <!-- PK fields -->
         <column name="referencesId" type="long" primary="true" />
