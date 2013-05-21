@@ -61,4 +61,25 @@
     </entity>
     
     
+    <entity name="References" local-service="true" remote-service="true">
+        <!-- PK fields -->
+        <column name="referencesId" type="long" primary="true" />
+
+        <!-- Group instance -->
+        <column name="groupId" type="long" />
+
+        <!-- Audit fields -->
+        <column name="companyId" type="long" />
+        <column name="userId" type="long" />
+        <column name="userName" type="String" />
+        <column name="createDate" type="Date" />
+        <column name="modifiedDate" type="Date" />
+
+        <!-- Other fields -->
+        <column name="referencesName" type="String" />
+        <column name="key" type="String" />
+        <column name="value" type="String" />
+        <column name="active" type="String" />
+    </entity>
+
 </service-builder>

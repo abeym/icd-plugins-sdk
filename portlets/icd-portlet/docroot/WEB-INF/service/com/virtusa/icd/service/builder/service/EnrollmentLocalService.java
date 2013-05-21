@@ -247,4 +247,9 @@ public interface EnrollmentLocalService extends BaseLocalService,
 	public java.lang.Object invokeMethod(java.lang.String name,
 		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
 		throws java.lang.Throwable;
+
+	public com.virtusa.icd.service.builder.model.Enrollment addEnrollment(
+		java.lang.String selectedEntityType,
+		java.lang.String organizationNPINum, java.lang.String organizationName)
+		throws com.liferay.portal.kernel.exception.SystemException;
 }

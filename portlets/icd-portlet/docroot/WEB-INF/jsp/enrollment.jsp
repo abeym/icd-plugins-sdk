@@ -194,6 +194,9 @@ $(document).ready(function(){
 					<button type="submit"><spring:message code="button.upload"/></button>
 				</td>
 				<td>
+					<button type="button" ><spring:message code="button.submit"/></button>
+				</td>
+				<td>
 					<button type="button"><spring:message code="button.faq"/></button>
 				</td>
 				</tr>

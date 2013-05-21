@@ -14,6 +14,9 @@
 
 package com.virtusa.icd.service.builder.service.impl;
 
+import com.liferay.counter.service.CounterLocalServiceUtil;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.virtusa.icd.service.builder.model.Enrollment;
 import com.virtusa.icd.service.builder.service.base.EnrollmentLocalServiceBaseImpl;
 
 /**
@@ -36,4 +39,14 @@ public class EnrollmentLocalServiceImpl extends EnrollmentLocalServiceBaseImpl {
 	 *
 	 * Never reference this interface directly. Always use {@link com.virtusa.icd.service.builder.service.EnrollmentLocalServiceUtil} to access the enrollment local service.
 	 */
+	
+	public Enrollment addEnrollment(String selectedEntityType, String organizationNPINum, String organizationName) throws SystemException
+	{
+		long enrollmentId = CounterLocalServiceUtil.increment(Enrollment.class.getName());
+		Enrollment enrollment = enrollmentPersistence.create(enrollmentId);
+		enrollment.setOrganizationNPINum(organizationNPINum);
+		enrollment.setOrganizationName(organizationName);
+		return enrollmentPersistence.update(enrollment);
+		
+	}
 }

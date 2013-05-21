@@ -40,7 +40,10 @@ import com.liferay.portal.service.persistence.UserPersistence;
 import com.virtusa.icd.service.builder.model.Enrollment;
 import com.virtusa.icd.service.builder.service.EnrollmentLocalService;
 import com.virtusa.icd.service.builder.service.EnrollmentService;
+import com.virtusa.icd.service.builder.service.ReferencesLocalService;
+import com.virtusa.icd.service.builder.service.ReferencesService;
 import com.virtusa.icd.service.builder.service.persistence.EnrollmentPersistence;
+import com.virtusa.icd.service.builder.service.persistence.ReferencesPersistence;
 
 import java.io.Serializable;
 
@@ -330,6 +333,62 @@ public abstract class EnrollmentLocalServiceBaseImpl
 	}
 
 	/**
+	 * Returns the references local service.
+	 *
+	 * @return the references local service
+	 */
+	public ReferencesLocalService getReferencesLocalService() {
+		return referencesLocalService;
+	}
+
+	/**
+	 * Sets the references local service.
+	 *
+	 * @param referencesLocalService the references local service
+	 */
+	public void setReferencesLocalService(
+		ReferencesLocalService referencesLocalService) {
+		this.referencesLocalService = referencesLocalService;
+	}
+
+	/**
+	 * Returns the references remote service.
+	 *
+	 * @return the references remote service
+	 */
+	public ReferencesService getReferencesService() {
+		return referencesService;
+	}
+
+	/**
+	 * Sets the references remote service.
+	 *
+	 * @param referencesService the references remote service
+	 */
+	public void setReferencesService(ReferencesService referencesService) {
+		this.referencesService = referencesService;
+	}
+
+	/**
+	 * Returns the references persistence.
+	 *
+	 * @return the references persistence
+	 */
+	public ReferencesPersistence getReferencesPersistence() {
+		return referencesPersistence;
+	}
+
+	/**
+	 * Sets the references persistence.
+	 *
+	 * @param referencesPersistence the references persistence
+	 */
+	public void setReferencesPersistence(
+		ReferencesPersistence referencesPersistence) {
+		this.referencesPersistence = referencesPersistence;
+	}
+
+	/**
 	 * Returns the counter local service.
 	 *
 	 * @return the counter local service
@@ -522,6 +581,12 @@ public abstract class EnrollmentLocalServiceBaseImpl
 	protected EnrollmentService enrollmentService;
 	@BeanReference(type = EnrollmentPersistence.class)
 	protected EnrollmentPersistence enrollmentPersistence;
+	@BeanReference(type = ReferencesLocalService.class)
+	protected ReferencesLocalService referencesLocalService;
+	@BeanReference(type = ReferencesService.class)
+	protected ReferencesService referencesService;
+	@BeanReference(type = ReferencesPersistence.class)
+	protected ReferencesPersistence referencesPersistence;
 	@BeanReference(type = CounterLocalService.class)
 	protected CounterLocalService counterLocalService;
 	@BeanReference(type = ResourceLocalService.class)

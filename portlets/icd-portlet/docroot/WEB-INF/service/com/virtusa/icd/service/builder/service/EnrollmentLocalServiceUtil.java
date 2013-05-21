@@ -274,6 +274,15 @@ public class EnrollmentLocalServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
+	public static com.virtusa.icd.service.builder.model.Enrollment addEnrollment(
+		java.lang.String selectedEntityType,
+		java.lang.String organizationNPINum, java.lang.String organizationName)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService()
+				   .addEnrollment(selectedEntityType, organizationNPINum,
+			organizationName);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

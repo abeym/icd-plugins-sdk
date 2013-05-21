@@ -1239,7 +1239,8 @@ public class EnrollmentWrapper implements Enrollment, ModelWrapper<Enrollment> {
 		return new EnrollmentWrapper((Enrollment)_enrollment.clone());
 	}
 
-	public int compareTo(Enrollment enrollment) {
+	public int compareTo(
+		com.virtusa.icd.service.builder.model.Enrollment enrollment) {
 		return _enrollment.compareTo(enrollment);
 	}
 
@@ -1248,11 +1249,11 @@ public class EnrollmentWrapper implements Enrollment, ModelWrapper<Enrollment> {
 		return _enrollment.hashCode();
 	}
 
-	public com.liferay.portal.model.CacheModel<Enrollment> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.virtusa.icd.service.builder.model.Enrollment> toCacheModel() {
 		return _enrollment.toCacheModel();
 	}
 
-	public Enrollment toEscapedModel() {
+	public com.virtusa.icd.service.builder.model.Enrollment toEscapedModel() {
 		return new EnrollmentWrapper(_enrollment.toEscapedModel());
 	}
 
