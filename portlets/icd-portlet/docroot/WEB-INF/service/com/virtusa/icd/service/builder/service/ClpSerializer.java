@@ -26,6 +26,8 @@ import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.model.BaseModel;
 
 import com.virtusa.icd.service.builder.model.EnrollmentClp;
+import com.virtusa.icd.service.builder.model.MedicalRecordClp;
+import com.virtusa.icd.service.builder.model.ReferencesClp;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -106,6 +108,14 @@ public class ClpSerializer {
 			return translateInputEnrollment(oldModel);
 		}
 
+		if (oldModelClassName.equals(MedicalRecordClp.class.getName())) {
+			return translateInputMedicalRecord(oldModel);
+		}
+
+		if (oldModelClassName.equals(ReferencesClp.class.getName())) {
+			return translateInputReferences(oldModel);
+		}
+
 		return oldModel;
 	}
 
@@ -125,6 +135,26 @@ public class ClpSerializer {
 		EnrollmentClp oldClpModel = (EnrollmentClp)oldModel;
 
 		BaseModel<?> newModel = oldClpModel.getEnrollmentRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
+	public static Object translateInputMedicalRecord(BaseModel<?> oldModel) {
+		MedicalRecordClp oldClpModel = (MedicalRecordClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getMedicalRecordRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
+	public static Object translateInputReferences(BaseModel<?> oldModel) {
+		ReferencesClp oldClpModel = (ReferencesClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getReferencesRemoteModel();
 
 		newModel.setModelAttributes(oldClpModel.getModelAttributes());
 
@@ -151,6 +181,16 @@ public class ClpSerializer {
 		if (oldModelClassName.equals(
 					"com.virtusa.icd.service.builder.model.impl.EnrollmentImpl")) {
 			return translateOutputEnrollment(oldModel);
+		}
+
+		if (oldModelClassName.equals(
+					"com.virtusa.icd.service.builder.model.impl.MedicalRecordImpl")) {
+			return translateOutputMedicalRecord(oldModel);
+		}
+
+		if (oldModelClassName.equals(
+					"com.virtusa.icd.service.builder.model.impl.ReferencesImpl")) {
+			return translateOutputReferences(oldModel);
 		}
 
 		return oldModel;
@@ -238,6 +278,16 @@ public class ClpSerializer {
 			return new com.virtusa.icd.service.builder.NoSuchEnrollmentException();
 		}
 
+		if (className.equals(
+					"com.virtusa.icd.service.builder.NoSuchMedicalRecordException")) {
+			return new com.virtusa.icd.service.builder.NoSuchMedicalRecordException();
+		}
+
+		if (className.equals(
+					"com.virtusa.icd.service.builder.NoSuchReferencesException")) {
+			return new com.virtusa.icd.service.builder.NoSuchReferencesException();
+		}
+
 		return throwable;
 	}
 
@@ -247,6 +297,26 @@ public class ClpSerializer {
 		newModel.setModelAttributes(oldModel.getModelAttributes());
 
 		newModel.setEnrollmentRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputMedicalRecord(BaseModel<?> oldModel) {
+		MedicalRecordClp newModel = new MedicalRecordClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setMedicalRecordRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputReferences(BaseModel<?> oldModel) {
+		ReferencesClp newModel = new ReferencesClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setReferencesRemoteModel(oldModel);
 
 		return newModel;
 	}

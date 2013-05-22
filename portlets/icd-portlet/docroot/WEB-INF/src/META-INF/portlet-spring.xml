@@ -4,4 +4,10 @@
 	<bean id="com.virtusa.icd.service.builder.service.EnrollmentLocalService" class="com.virtusa.icd.service.builder.service.impl.EnrollmentLocalServiceImpl" />
 	<bean id="com.virtusa.icd.service.builder.service.EnrollmentService" class="com.virtusa.icd.service.builder.service.impl.EnrollmentServiceImpl" />
 	<bean id="com.virtusa.icd.service.builder.service.persistence.EnrollmentPersistence" class="com.virtusa.icd.service.builder.service.persistence.EnrollmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.virtusa.icd.service.builder.service.MedicalRecordLocalService" class="com.virtusa.icd.service.builder.service.impl.MedicalRecordLocalServiceImpl" />
+	<bean id="com.virtusa.icd.service.builder.service.MedicalRecordService" class="com.virtusa.icd.service.builder.service.impl.MedicalRecordServiceImpl" />
+	<bean id="com.virtusa.icd.service.builder.service.persistence.MedicalRecordPersistence" class="com.virtusa.icd.service.builder.service.persistence.MedicalRecordPersistenceImpl" parent="basePersistence" />
+	<bean id="com.virtusa.icd.service.builder.service.ReferencesLocalService" class="com.virtusa.icd.service.builder.service.impl.ReferencesLocalServiceImpl" />
+	<bean id="com.virtusa.icd.service.builder.service.ReferencesService" class="com.virtusa.icd.service.builder.service.impl.ReferencesServiceImpl" />
+	<bean id="com.virtusa.icd.service.builder.service.persistence.ReferencesPersistence" class="com.virtusa.icd.service.builder.service.persistence.ReferencesPersistenceImpl" parent="basePersistence" />
 </beans>

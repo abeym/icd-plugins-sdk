@@ -32,9 +32,12 @@ import com.liferay.portal.service.persistence.UserPersistence;
 import com.virtusa.icd.service.builder.model.Enrollment;
 import com.virtusa.icd.service.builder.service.EnrollmentLocalService;
 import com.virtusa.icd.service.builder.service.EnrollmentService;
+import com.virtusa.icd.service.builder.service.MedicalRecordLocalService;
+import com.virtusa.icd.service.builder.service.MedicalRecordService;
 import com.virtusa.icd.service.builder.service.ReferencesLocalService;
 import com.virtusa.icd.service.builder.service.ReferencesService;
 import com.virtusa.icd.service.builder.service.persistence.EnrollmentPersistence;
+import com.virtusa.icd.service.builder.service.persistence.MedicalRecordPersistence;
 import com.virtusa.icd.service.builder.service.persistence.ReferencesPersistence;
 
 import javax.sql.DataSource;
@@ -113,6 +116,63 @@ public abstract class EnrollmentServiceBaseImpl extends BaseServiceImpl
 	public void setEnrollmentPersistence(
 		EnrollmentPersistence enrollmentPersistence) {
 		this.enrollmentPersistence = enrollmentPersistence;
+	}
+
+	/**
+	 * Returns the medical record local service.
+	 *
+	 * @return the medical record local service
+	 */
+	public MedicalRecordLocalService getMedicalRecordLocalService() {
+		return medicalRecordLocalService;
+	}
+
+	/**
+	 * Sets the medical record local service.
+	 *
+	 * @param medicalRecordLocalService the medical record local service
+	 */
+	public void setMedicalRecordLocalService(
+		MedicalRecordLocalService medicalRecordLocalService) {
+		this.medicalRecordLocalService = medicalRecordLocalService;
+	}
+
+	/**
+	 * Returns the medical record remote service.
+	 *
+	 * @return the medical record remote service
+	 */
+	public MedicalRecordService getMedicalRecordService() {
+		return medicalRecordService;
+	}
+
+	/**
+	 * Sets the medical record remote service.
+	 *
+	 * @param medicalRecordService the medical record remote service
+	 */
+	public void setMedicalRecordService(
+		MedicalRecordService medicalRecordService) {
+		this.medicalRecordService = medicalRecordService;
+	}
+
+	/**
+	 * Returns the medical record persistence.
+	 *
+	 * @return the medical record persistence
+	 */
+	public MedicalRecordPersistence getMedicalRecordPersistence() {
+		return medicalRecordPersistence;
+	}
+
+	/**
+	 * Sets the medical record persistence.
+	 *
+	 * @param medicalRecordPersistence the medical record persistence
+	 */
+	public void setMedicalRecordPersistence(
+		MedicalRecordPersistence medicalRecordPersistence) {
+		this.medicalRecordPersistence = medicalRecordPersistence;
 	}
 
 	/**
@@ -360,6 +420,12 @@ public abstract class EnrollmentServiceBaseImpl extends BaseServiceImpl
 	protected EnrollmentService enrollmentService;
 	@BeanReference(type = EnrollmentPersistence.class)
 	protected EnrollmentPersistence enrollmentPersistence;
+	@BeanReference(type = MedicalRecordLocalService.class)
+	protected MedicalRecordLocalService medicalRecordLocalService;
+	@BeanReference(type = MedicalRecordService.class)
+	protected MedicalRecordService medicalRecordService;
+	@BeanReference(type = MedicalRecordPersistence.class)
+	protected MedicalRecordPersistence medicalRecordPersistence;
 	@BeanReference(type = ReferencesLocalService.class)
 	protected ReferencesLocalService referencesLocalService;
 	@BeanReference(type = ReferencesService.class)

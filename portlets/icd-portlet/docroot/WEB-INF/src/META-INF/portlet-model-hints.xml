@@ -46,4 +46,61 @@
 		<field name="primaryBillingContactEmail" type="String" />
 		<field name="file" type="String" />
 	</model>
+	<model name="com.virtusa.icd.service.builder.model.MedicalRecord">
+		<field name="mrId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="mrTestCaseName" type="String" />
+		<field name="msDrg" type="String" />
+		<field name="patientType" type="String" />
+		<field name="patientAge" type="String" />
+		<field name="los" type="String" />
+		<field name="ahrqCategoryCode" type="String" />
+		<field name="ahrqSubCategoryCode" type="String" />
+		<field name="mrTestCaseDescription" type="String" />
+		<field name="icd9AdmittingDx" type="String" />
+		<field name="icd9PrincipalDx" type="String" />
+		<field name="icd9PrincipalProcedure" type="String" />
+		<field name="otherIcd9Dx1" type="String" />
+		<field name="otherIcd9Dx2" type="String" />
+		<field name="otherIcd9Dx3" type="String" />
+		<field name="otherIcd9Pcs1" type="String" />
+		<field name="otherIcd9Pcs2" type="String" />
+		<field name="otherIcd9Pcs3" type="String" />
+		<field name="icd10AdmittingDx" type="String" />
+		<field name="icd10PrincipalDx" type="String" />
+		<field name="icd10PrincipalProcedure" type="String" />
+		<field name="otherIcd10Dx1" type="String" />
+		<field name="otherIcd10Dx2" type="String" />
+		<field name="otherIcd10Dx3" type="String" />
+		<field name="otherIcd10Pcs1" type="String" />
+		<field name="otherIcd10Pcs2" type="String" />
+		<field name="otherIcd10Pcs3" type="String" />
+		<field name="isHistoryAndPsysical" type="boolean" />
+		<field name="isDischargeNotes" type="boolean" />
+		<field name="isConsultations" type="boolean" />
+		<field name="isOperatingNotes" type="boolean" />
+		<field name="isPhysicianNotes" type="boolean" />
+		<field name="isRadiology" type="boolean" />
+		<field name="isGiProcedures" type="boolean" />
+		<field name="isEducationalNotes" type="boolean" />
+		<field name="file" type="String" />
+	</model>
+	<model name="com.virtusa.icd.service.builder.model.References">
+		<field name="referencesId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="referencesName" type="String" />
+		<field name="key" type="String" />
+		<field name="value" type="String" />
+		<field name="active" type="String" />
+	</model>
 </model-hints>

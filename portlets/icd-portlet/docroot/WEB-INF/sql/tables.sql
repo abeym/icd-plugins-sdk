@@ -43,3 +43,73 @@ create table ICD_Enrollment (
 	primaryBillingContactEmail VARCHAR(75) null,
 	file VARCHAR(75) null
 );
+
+create table ICD_MedicalRecord (
+	mrId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	mrTestCaseName VARCHAR(75) null,
+	msDrg VARCHAR(75) null,
+	patientType VARCHAR(75) null,
+	patientAge VARCHAR(75) null,
+	los VARCHAR(75) null,
+	ahrqCategoryCode VARCHAR(75) null,
+	ahrqSubCategoryCode VARCHAR(75) null,
+	mrTestCaseDescription VARCHAR(75) null,
+	icd9AdmittingDx VARCHAR(75) null,
+	icd9PrincipalDx VARCHAR(75) null,
+	icd9PrincipalProcedure VARCHAR(75) null,
+	otherIcd9Dx1 VARCHAR(75) null,
+	otherIcd9Dx2 VARCHAR(75) null,
+	otherIcd9Dx3 VARCHAR(75) null,
+	otherIcd9Pcs1 VARCHAR(75) null,
+	otherIcd9Pcs2 VARCHAR(75) null,
+	otherIcd9Pcs3 VARCHAR(75) null,
+	icd10AdmittingDx VARCHAR(75) null,
+	icd10PrincipalDx VARCHAR(75) null,
+	icd10PrincipalProcedure VARCHAR(75) null,
+	otherIcd10Dx1 VARCHAR(75) null,
+	otherIcd10Dx2 VARCHAR(75) null,
+	otherIcd10Dx3 VARCHAR(75) null,
+	otherIcd10Pcs1 VARCHAR(75) null,
+	otherIcd10Pcs2 VARCHAR(75) null,
+	otherIcd10Pcs3 VARCHAR(75) null,
+	isHistoryAndPsysical BOOLEAN,
+	isDischargeNotes BOOLEAN,
+	isConsultations BOOLEAN,
+	isOperatingNotes BOOLEAN,
+	isPhysicianNotes BOOLEAN,
+	isRadiology BOOLEAN,
+	isGiProcedures BOOLEAN,
+	isEducationalNotes BOOLEAN,
+	file VARCHAR(75) null
+);
+
+create table ICD_MrAd (
+	mrId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	selectedEntityType VARCHAR(75) null
+);
+
+create table ICD_References (
+	referencesId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	referencesName VARCHAR(75) null,
+	key_ VARCHAR(75) null,
+	value VARCHAR(75) null,
+	active_ VARCHAR(75) null
+);

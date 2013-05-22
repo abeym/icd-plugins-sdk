@@ -46,7 +46,7 @@ public class EnrollmentLocalServiceImpl extends EnrollmentLocalServiceBaseImpl {
 		Enrollment enrollment = enrollmentPersistence.create(enrollmentId);
 		enrollment.setOrganizationNPINum(organizationNPINum);
 		enrollment.setOrganizationName(organizationName);
-		return enrollmentPersistence.update(enrollment);
+		return enrollmentPersistence.update(enrollment, true);
 		
 	}
 }

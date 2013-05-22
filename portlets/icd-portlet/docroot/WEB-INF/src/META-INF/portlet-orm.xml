@@ -62,8 +62,97 @@
 			<transient name="userUuid" />
 		</attributes>
 	</mapped-superclass>
+	<mapped-superclass class="com.virtusa.icd.service.builder.model.impl.MedicalRecordModelImpl">
+		<attributes>
+			<id name="mrId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="mrTestCaseName" />
+			<basic name="msDrg" />
+			<basic name="patientType" />
+			<basic name="patientAge" />
+			<basic name="los" />
+			<basic name="ahrqCategoryCode" />
+			<basic name="ahrqSubCategoryCode" />
+			<basic name="mrTestCaseDescription" />
+			<basic name="icd9AdmittingDx" />
+			<basic name="icd9PrincipalDx" />
+			<basic name="icd9PrincipalProcedure" />
+			<basic name="otherIcd9Dx1" />
+			<basic name="otherIcd9Dx2" />
+			<basic name="otherIcd9Dx3" />
+			<basic name="otherIcd9Pcs1" />
+			<basic name="otherIcd9Pcs2" />
+			<basic name="otherIcd9Pcs3" />
+			<basic name="icd10AdmittingDx" />
+			<basic name="icd10PrincipalDx" />
+			<basic name="icd10PrincipalProcedure" />
+			<basic name="otherIcd10Dx1" />
+			<basic name="otherIcd10Dx2" />
+			<basic name="otherIcd10Dx3" />
+			<basic name="otherIcd10Pcs1" />
+			<basic name="otherIcd10Pcs2" />
+			<basic name="otherIcd10Pcs3" />
+			<basic name="isHistoryAndPsysical" />
+			<basic name="isDischargeNotes" />
+			<basic name="isConsultations" />
+			<basic name="isOperatingNotes" />
+			<basic name="isPhysicianNotes" />
+			<basic name="isRadiology" />
+			<basic name="isGiProcedures" />
+			<basic name="isEducationalNotes" />
+			<basic name="file" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.virtusa.icd.service.builder.model.impl.ReferencesModelImpl">
+		<attributes>
+			<id name="referencesId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="referencesName" />
+			<basic name="key">
+				<column name="KEY_" />
+			</basic>
+			<basic name="value" />
+			<basic name="active">
+				<column name="ACTIVE_" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
 	<entity class="com.virtusa.icd.service.builder.model.impl.EnrollmentImpl" name="Enrollment">
 		<table name="ICD_Enrollment" />
+		<attributes />
+	</entity>
+	<entity class="com.virtusa.icd.service.builder.model.impl.MedicalRecordImpl" name="MedicalRecord">
+		<table name="ICD_MedicalRecord" />
+		<attributes />
+	</entity>
+	<entity class="com.virtusa.icd.service.builder.model.impl.ReferencesImpl" name="References">
+		<table name="ICD_References" />
 		<attributes />
 	</entity>
 </entity-mappings>

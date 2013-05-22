@@ -644,6 +644,8 @@ public class EnrollmentPersistenceImpl extends BasePersistenceImpl<Enrollment>
 
 	@BeanReference(type = EnrollmentPersistence.class)
 	protected EnrollmentPersistence enrollmentPersistence;
+	@BeanReference(type = MedicalRecordPersistence.class)
+	protected MedicalRecordPersistence medicalRecordPersistence;
 	@BeanReference(type = ReferencesPersistence.class)
 	protected ReferencesPersistence referencesPersistence;
 	@BeanReference(type = ResourcePersistence.class)

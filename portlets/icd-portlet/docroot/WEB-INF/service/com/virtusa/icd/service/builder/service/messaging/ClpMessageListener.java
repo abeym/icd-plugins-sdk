@@ -20,6 +20,10 @@ import com.liferay.portal.kernel.messaging.Message;
 import com.virtusa.icd.service.builder.service.ClpSerializer;
 import com.virtusa.icd.service.builder.service.EnrollmentLocalServiceUtil;
 import com.virtusa.icd.service.builder.service.EnrollmentServiceUtil;
+import com.virtusa.icd.service.builder.service.MedicalRecordLocalServiceUtil;
+import com.virtusa.icd.service.builder.service.MedicalRecordServiceUtil;
+import com.virtusa.icd.service.builder.service.ReferencesLocalServiceUtil;
+import com.virtusa.icd.service.builder.service.ReferencesServiceUtil;
 
 /**
  * @author Brian Wing Shun Chan
@@ -39,6 +43,12 @@ public class ClpMessageListener extends BaseMessageListener {
 			EnrollmentLocalServiceUtil.clearService();
 
 			EnrollmentServiceUtil.clearService();
+			MedicalRecordLocalServiceUtil.clearService();
+
+			MedicalRecordServiceUtil.clearService();
+			ReferencesLocalServiceUtil.clearService();
+
+			ReferencesServiceUtil.clearService();
 		}
 	}
 }
