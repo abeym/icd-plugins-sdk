@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<!-- <?xml version="1.0"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
 "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
@@ -39,4 +39,4 @@ class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 <ref bean="icdHibernateSessionFactory" />
 </property>
 </bean>
-</beans>
+</beans> -->

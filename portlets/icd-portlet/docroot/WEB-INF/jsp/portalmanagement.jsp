@@ -1,6 +1,15 @@
 <%@ include file="/WEB-INF/jsp/include.jsp" %>
 
 <h1><spring:message code="portalmanagement.title"/></h1>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript" 
+src="<%=request.getContextPath()%>/js/jquery.labelify.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(":text").labelify();
+});
+</script>
 
 
 <form method="post" action="<portlet:actionURL/>" enctype="multipart/form-data">
@@ -11,10 +20,12 @@
 			<td><table>
 				<tr>
 					<td>
-						<input type="text" name="searchMEdicalRecords">
+						<spring:message code="portalmanagement.searchMedicalRecords" var="vsearchMedicalRecords"/>
+						<input type="text" name="searchMedicalRecords" title="${vsearchMedicalRecords}">
 					</td>
 					<td>
-						<input type="text" name="searchPortalUsers">
+						<spring:message code="portalmanagement.searchPortalUsers" var="vsearchPortalUsers"/>
+						<input type="text" name="searchPortalUsers" title="${vsearchPortalUsers}">
 					</td>
 				</tr>
 			</table></td>
@@ -31,7 +42,8 @@
 					</select>
 				</td></tr>
 				<tr><td>
-					<input type="text" name="currentTestingState">
+					<spring:message code="portalmanagement.currentTestingState" var="vcurrentTestingState"/>
+					<input type="text" name="currentTestingState" title="${vcurrentTestingState}">
 				</td></tr>
 				<tr><td>
 					<select name="changeTeestingState">
@@ -114,6 +126,7 @@
 				</td></tr>
 		</tr>
 
+	</table>
 	</table>
 	
 	

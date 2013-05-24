@@ -1,6 +1,15 @@
 <%@ include file="/WEB-INF/jsp/include.jsp" %>
 
 <h1><spring:message code="portalmanagement.title"/></h1>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript" 
+src="<%=request.getContextPath()%>/js/jquery.labelify.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(":text").labelify();
+});
+</script>
 
 
 <form method="post" action="<portlet:actionURL/>" enctype="multipart/form-data">
@@ -22,22 +31,26 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="enrollmentReport"> <label for="enrollmentReport"><spring:message code="reporting.enrollmentReport"/></label>
+						<spring:message code="reporting.enrollmentReport" var="venrollmentReport"/>
+						<input type="checkbox" name="enrollmentReport" title="${venrollmentReport}"> <label for="enrollmentReport"><spring:message code="reporting.enrollmentReport"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="mrStatus"> <label for="mrStatus"><spring:message code="reporting.mrStatus"/></label>
+						<spring:message code="reporting.mrStatus" var="vmrStatus"/>
+						<input type="checkbox" name="mrStatus" title="${vmrStatus}"> <label for="mrStatus"><spring:message code="reporting.mrStatus"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="icd10CodingAccuracy"> <label for="icd10CodingAccuracy"><spring:message code="reporting.icd10CodingAccuracy"/></label>
+						<spring:message code="reporting.icd10CodingAccuracy" var="vicd10CodingAccuracy"/>
+						<input type="checkbox" name="icd10CodingAccuracy" title="${vicd10CodingAccuracy}"> <label for="icd10CodingAccuracy"><spring:message code="reporting.icd10CodingAccuracy"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="icd10CodingPatterns"> <label for="icd10CodingPatterns"><spring:message code="reporting.icd10CodingPatterns"/></label>
+						<spring:message code="reporting.icd10CodingPatterns" var="vicd10CodingPatterns"/>
+						<input type="checkbox" name="icd10CodingPatterns" title="${vicd10CodingPatterns}"> <label for="icd10CodingPatterns"><spring:message code="reporting.icd10CodingPatterns"/></label>
 					</td>
 				</tr>
 			</table></td>
@@ -51,22 +64,26 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="testingStatus"> <label for="testingStatus"><spring:message code="reporting.testingStatus"/></label>
+						<spring:message code="reporting.testingStatus" var="vtestingStatus"/>
+						<input type="checkbox" name="testingStatus" title="${vtestingStatus}"> <label for="testingStatus"><spring:message code="reporting.testingStatus"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="5010Compliance"> <label for="5010Compliance"><spring:message code="reporting.5010Compliance"/></label>
+						<spring:message code="reporting.5010Compliance" var="v5010Compliance"/>
+						<input type="checkbox" name="5010Compliance" title="${v5010Compliance}"> <label for="5010Compliance"><spring:message code="reporting.5010Compliance"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="adjudicationRate"> <label for="adjudicationRate"><spring:message code="reporting.adjudicationRate"/></label>
+						<spring:message code="reporting.adjudicationRate" var="vadjudicationRate"/>
+						<input type="checkbox" name="adjudicationRate" title="${vadjudicationRate}"> <label for="adjudicationRate"><spring:message code="reporting.adjudicationRate"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="remittanceAccuracy"> <label for="remittanceAccuracy"><spring:message code="reporting.remittanceAccuracy"/></label>
+						<spring:message code="reporting.remittanceAccuracy" var="vremittanceAccuracy"/>
+						<input type="checkbox" name="remittanceAccuracy" title="${vremittanceAccuracy}"> <label for="remittanceAccuracy"><spring:message code="reporting.remittanceAccuracy"/></label>
 					</td>
 				</tr>
 			</table></td>
@@ -75,27 +92,32 @@
 			<td><table>
 				<tr>
 					<td>
-						<input type="text" name="selectedReportsToDownload">
+						<spring:message code="reporting.selectedReportsToDownload" var="vselectedReportsToDownload"/>
+						<input type="text" name="selectedReportsToDownload" title="${vselectedReportsToDownload}">
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="icd10TestingProjectOverview"> <label for="icd10TestingProjectOverview"><spring:message code="reporting.icd10TestingProjectOverview"/></label>
+						<spring:message code="reporting.icd10TestingProjectOverview" var="vicd10TestingProjectOverview"/>
+						<input type="checkbox" name="icd10TestingProjectOverview" title="${vicd10TestingProjectOverview}"> <label for="icd10TestingProjectOverview"><spring:message code="reporting.icd10TestingProjectOverview"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="icd10CodingRevision"> <label for="icd10CodingRevision"><spring:message code="reporting.icd10CodingRevision"/></label>
+						<spring:message code="reporting.icd10CodingRevision" var="vicd10CodingRevision"/>
+						<input type="checkbox" name="icd10CodingRevision" title="${vicd10CodingRevision}"> <label for="icd10CodingRevision"><spring:message code="reporting.icd10CodingRevision"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="adjudicationRate"> <label for="adjudicationRate"><spring:message code="reporting.adjudicationRate"/></label>
+						<spring:message code="reporting.adjudicationRate" var="vadjudicationRate"/>
+						<input type="checkbox" name="adjudicationRate" title="${vadjudicationRate}"> <label for="adjudicationRate"><spring:message code="reporting.adjudicationRate"/></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="checkbox" name="remittanceAccuracy"> <label for="remittanceAccuracy"><spring:message code="reporting.remittanceAccuracy"/></label>
+						<spring:message code="reporting.remittanceAccuracy" var="vremittanceAccuracy"/>
+						<input type="checkbox" name="remittanceAccuracy" title="${vremittanceAccuracy}"> <label for="remittanceAccuracy"><spring:message code="reporting.remittanceAccuracy"/></label>
 					</td>
 				</tr>
 			</table></td>
@@ -141,7 +163,8 @@
 					</select>
 				</td></tr>
 				<tr><td>
-					<input type="text" name="currentTestingState">
+					<spring:message code="reporting.currentTestingState" var="vcurrentTestingState"/>
+					<input type="text" name="currentTestingState" title="${vcurrentTestingState}">
 				</td></tr>
 				<tr><td>
 					<select name="changeTeestingState">

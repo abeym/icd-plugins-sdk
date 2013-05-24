@@ -1,6 +1,15 @@
 <%@ include file="/WEB-INF/jsp/include.jsp" %>
 
 <h1><spring:message code="mradmin.title"/></h1>
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript" 
+src="<%=request.getContextPath()%>/js/jquery.labelify.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(":text").labelify();
+});
+</script>
 
 
 <form method="post" action="<portlet:actionURL/>" enctype="multipart/form-data">
@@ -19,7 +28,8 @@
 					</select>
 				</td></tr>
 				<tr><td>
-					<input type="text" name="mrTestCaseNum">
+					<spring:message code="mradmin.mrTestCaseNum" var="vmrTestCaseNum"/>
+					<input type="text" name="mrTestCaseNum" title="${vmrTestCaseNum}">
 				</td></tr>
 				<tr><td>
 					<select name="mrDrgNum">
@@ -114,7 +124,8 @@
 		<tr>
 			<td><table>
 				<tr><td>
-					<input type="file" name="mrFile"/>
+					<spring:message code="mradmin.mrFile" var="vmrFile"/>
+					<input type="file" name="mrFile" title="${vmrFile}"/>
 				</td></tr>
 				<tr><td>
 					<button type="submit"><spring:message code="mradmin.submitRecordToDatabase"/></button>
@@ -127,31 +138,39 @@
 	
 			<td><table>
 				<tr><td>
-					<input type="checkbox" name="historyAndPhysical"> <label for="historyAndPhysical"><spring:message code="mradmin.historyAndPhysical"/></label>
+					<spring:message code="mradmin.historyAndPhysical" var="vhistoryAndPhysical"/>
+					<input type="checkbox" name="historyAndPhysical" title="${vhistoryAndPhysical}"> <label for="historyAndPhysical"><spring:message code="mradmin.historyAndPhysical"/></label>
 				</td></tr>
 				<tr><td>
-					<input type="checkbox" name="dischargeNotes"> <label for="dischargeNotes"><spring:message code="mradmin.dischargeNotes"/></label>
+					<spring:message code="mradmin.dischargeNotes" var="vdischargeNotes"/>
+					<input type="checkbox" name="dischargeNotes" title="${vdischargeNotes}"> <label for="dischargeNotes"><spring:message code="mradmin.dischargeNotes"/></label>
 				</td></tr>
 				<tr><td>
-					<input type="checkbox" name="consultations"> <label for="consultations"><spring:message code="mradmin.consultations"/></label>
+					<spring:message code="mradmin.consultations" var="vconsultations"/>
+					<input type="checkbox" name="consultations" title="${vconsultations}"> <label for="consultations"><spring:message code="mradmin.consultations"/></label>
 				</td></tr>
 				<tr><td>
-					<input type="checkbox" name="operatingNotes"> <label for="operatingNotes"><spring:message code="mradmin.operatingNotes"/></label>
+					<spring:message code="mradmin.operatingNotes" var="voperatingNotes"/>
+					<input type="checkbox" name="operatingNotes" title="${voperatingNotes}"> <label for="operatingNotes"><spring:message code="mradmin.operatingNotes"/></label>
 				</td></tr>
 			</table></td>
 	
 			<td><table>
 				<tr><td>
-					<input type="checkbox" name="physicianNotes"> <label for="physicianNotes"><spring:message code="mradmin.physicianNotes"/></label>
+					<spring:message code="mradmin.physicianNotes" var="vphysicianNotes"/>
+					<input type="checkbox" name="physicianNotes" title="${vphysicianNotes}"> <label for="physicianNotes"><spring:message code="mradmin.physicianNotes"/></label>
 				</td></tr>
 				<tr><td>
-					<input type="checkbox" name="radiology"> <label for="radiology"><spring:message code="mradmin.radiology"/></label>
+					<spring:message code="mradmin.radiology" var="vradiology"/>
+					<input type="checkbox" name="radiology" title="${vradiology}"> <label for="radiology"><spring:message code="mradmin.radiology"/></label>
 				</td></tr>
 				<tr><td>
-					<input type="checkbox" name="giProcedures"> <label for="giProcedures"><spring:message code="mradmin.giProcedures"/></label>
+					<spring:message code="mradmin.giProcedures" var="vgiProcedures"/>
+					<input type="checkbox" name="giProcedures" title="${vgiProcedures}"> <label for="giProcedures"><spring:message code="mradmin.giProcedures"/></label>
 				</td></tr>
 				<tr><td>
-					<input type="checkbox" name="educationalNotes"> <label for="educationalNotes"><spring:message code="mradmin.educationalNotes"/></label>
+					<spring:message code="mradmin.educationalNotes" var="veducationalNotes"/>
+					<input type="checkbox" name="educationalNotes" title="${veducationalNotes}"> <label for="educationalNotes"><spring:message code="mradmin.educationalNotes"/></label>
 				</td></tr>
 			</table></td>
 		</tr>
