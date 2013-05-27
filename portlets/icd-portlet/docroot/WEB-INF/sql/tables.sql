@@ -111,5 +111,6 @@ create table ICD_References (
 	referencesName VARCHAR(75) null,
 	key_ VARCHAR(75) null,
 	value VARCHAR(75) null,
-	active_ VARCHAR(75) null
+	active_ VARCHAR(75) null,
+	order_ INTEGER
 );

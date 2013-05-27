@@ -86,7 +86,12 @@
 				<div class="classMiddle">
 					<table>
 						<tr>
-							<td><select multiple="multiple" name="top5HealthPlansByRev">									
+							<td><select multiple="multiple" name="top5HealthPlansByRev">
+									<c:forEach items="${top5byrev}" var="revItem">
+										<option value="<c:out value="${revItem.key}"/>">
+											<c:out value="${revItem.value} " />
+										</option>
+									</c:forEach>									
 							</select>
 							 
 							</td>

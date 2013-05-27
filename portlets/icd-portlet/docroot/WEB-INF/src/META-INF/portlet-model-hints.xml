@@ -102,5 +102,6 @@
 		<field name="key" type="String" />
 		<field name="value" type="String" />
 		<field name="active" type="String" />
+		<field name="order" type="int" />
 	</model>
 </model-hints>

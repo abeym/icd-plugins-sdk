@@ -137,6 +137,10 @@
         <column name="value" type="String" />
         <column name="active" type="String" />
         <column name="order" type="int" />
+		
+		<finder return-type="Collection" name="referencesName">  
+			<finder-column name="referencesName"/>  
+		</finder>  
     </entity>
 
 </service-builder>
