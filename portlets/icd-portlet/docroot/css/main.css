@@ -1,0 +1,121 @@
+/* CSS Document */
+
+
+#footer{
+	padding:15px 0 15px 0;
+	text-align:center;
+	font-size: 12px;
+	width:960px;
+	margin:auto;
+	position: relative;
+}
+
+#banner{
+	background-color:#FFFFFF;
+}
+
+#banner .bannerwraper{
+	width:960px;
+	margin:auto;
+	border-top:1.5px solid #CCCCCC;
+	 border-left:1.5px solid #CCCCCC;
+	 border-right:1.5px solid #CCCCCC;
+ 	border-bottom:1.5px solid #CCCCCC;
+}
+#menubar .menubarwraper{	
+	background-repeat: repeat-x;
+	background-position: left center;
+	 margin:auto;
+	 width:960px;
+	 height:50px;
+	 border-top:1.5px solid #CCCCCC;
+	 border-left:1.5px solid #CCCCCC;
+	 border-right:1.5px solid #CCCCCC;
+ 	border-bottom:1.5px solid #CCCCCC;
+}
+
+#menubar ul{
+	
+	
+}
+
+#menubar ul li{
+	float:left; 
+	padding:5px 10px 5px 10px;
+	 border-right:1px solid #CCCCCC;
+	 margin:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	 font-size:15px;
+}
+
+#page_container{
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 0px;
+	text-align: left;
+	padding: 0;
+	padding-bottom:1px;
+	overflow: visible;
+	background-color:#FFFFFF;
+	border-left: 1px solid #D6DFEE;
+	border-right: 1px solid #D6DFEE;
+	border-bottom: 1px solid #D6DFEE;
+	position: relative;
+}
+
+#content_top{
+}
+#content_top .classLeft{
+float: left;
+
+}
+#content_top .classMiddle{
+float: left;
+}
+#content_top .classRight{
+float: left;
+}
+#content_top .classRightRepeat{
+float: left;
+}
+
+.clearfix {
+   clear: both;
+   font-size:0px;
+   height:0px;
+   width:0px;
+   padding:0px;
+   margin:0px;   
+}
+
+
+#content_middle{
+}
+#content_middle .section{
+float: left;
+}
+#content_middle .sectionTwo{
+float: left;
+}
+#content_middle	.sectionThree{
+float: left;
+}
+#content_bottom{
+}
+#content_bottom .button_section{
+float: left;
+}
+
+div.buttion_type1{
+	float:left;
+	margin: 10px 0 0 0;
+}
+div.buttion_type2{
+	float:right;
+	margin: 10px 0 0 0;
+}
+
+.button{
+}
+
+
