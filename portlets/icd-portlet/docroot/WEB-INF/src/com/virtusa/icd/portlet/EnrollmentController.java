@@ -1,26 +1,32 @@
 package com.virtusa.icd.portlet;
 
 import java.util.SortedSet;
-import java.util.TreeSet;
 
-import javax.portlet.PortletRequest;
-import javax.portlet.PortletResponse;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.virtusa.icd.domain.EntityType;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.liferay.portal.kernel.exception.SystemException;
-import com.virtusa.icd.domain.EntityType;
 import com.virtusa.icd.service.EnrollmentService;
-import com.virtusa.icd.service.builder.service.ReferencesLocalServiceUtil;
-import java.util.List;
-import com.virtusa.icd.service.builder.model.References;
+import com.virtusa.icd.util.Utils;
+import javax.portlet.PortletRequest;
+import javax.portlet.PortletResponse;
+
 
 @Controller
 @RequestMapping({ "VIEW" })
 public class EnrollmentController {
 
+	private static final String REF_HEALTHPLANS = "healthplans";
+
+	private static final String REF_CLEARINGHOUSES = "clearinghouses";
+
+	private static final String REF_EHRBILLINGVENDORS = "ehrAndBillingVendors";
+
+	private static final String REF_REVCYCLEVENDORS = "revCycleVendors";
+	
 	private EnrollmentService service;
 
 	public EnrollmentService getService() {
@@ -38,19 +44,24 @@ public class EnrollmentController {
 
 	@ModelAttribute("top5byrev")
 	public SortedSet getTopFiveByRev() {
-		try {
-			List<References> list = ReferencesLocalServiceUtil.getService()
-					.getReferencesByName("healthplans");
-			SortedSet<References> set = new TreeSet<References>();
-			for (References ref : list) {
-				set.add(ref);
-			}
-			return set;
-		} catch (Exception e) {
-			return null;
-		}
+		return Utils.getReferences(REF_HEALTHPLANS);
 	}
 
+	@ModelAttribute("clearinghouses")
+	public SortedSet getClearingHouses() {
+		return Utils.getReferences(REF_CLEARINGHOUSES);
+	}
+
+	@ModelAttribute("ehrAndBillingVendors")
+	public SortedSet getEhrAndBillingVendors() {
+		return Utils.getReferences(REF_EHRBILLINGVENDORS);
+	}
+	
+	@ModelAttribute("revCycleVendors")
+	public SortedSet getRevenueCycleVendors() {
+		return Utils.getReferences(REF_REVCYCLEVENDORS);
+	}
+	
 	@RequestMapping
 	public String showEnrollment() {
 		return "enrollment";

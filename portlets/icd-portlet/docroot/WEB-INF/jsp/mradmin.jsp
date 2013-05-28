@@ -33,22 +33,56 @@ $(document).ready(function(){
 				</td></tr>
 				<tr><td>
 					<select name="mrDrgNum">
+							<c:forEach items="${msDrg}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
 					</select>
 				</td></tr>
 				<tr><td>
 					<select name="patientType">
+							<c:forEach items="${patientType}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
+				</td></tr>
+				<tr><td>
+					<select name="patientAge">
+							<c:forEach items="${patientAge}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
 					</select>
 				</td></tr>
 				<tr><td>
 					<select name="los">
+							<c:forEach items="${los}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
 					</select>
 				</td></tr>
 				<tr><td>
 					<select name="ahrqCategoryCode">
+							<c:forEach items="${ahrqCategoryCode}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
 					</select>
 				</td></tr>
 				<tr><td>
 					<select name="ahrqSubCategoryCode">
+							<c:forEach items="${ahrqSubCategoryCode}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
 					</select>
 				</td></tr>
 				<tr><td>
@@ -59,61 +93,169 @@ $(document).ready(function(){
 	
 			<td><table>
 				<tr><td>
-					<select name="icd9AdmittingDxCode"></select>
+					<select name="icd9AdmittingDxCode">
+							<c:forEach items="${icd9AdmittingDx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd9PrincipalDxCode"></select>
+					<select name="icd9PrincipalDxCode">
+							<c:forEach items="${icd9PrincipalDx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd9PrincipalProcCode"></select>
+					<select name="icd9PrincipalProcCode">
+							<c:forEach items="${icd9PrincipalProcedure}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd9DxCode1"></select>
+					<select name="otherIcd9DxCode1">
+							<c:forEach items="${otherIcd9Dx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd9DxCode2"></select>
+					<select name="otherIcd9DxCode2">
+							<c:forEach items="${otherIcd9Dx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd9DxCode3"></select>
+					<select name="otherIcd9DxCode3">
+							<c:forEach items="${otherIcd9Dx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd9PcsCode1"></select>
+					<select name="otherIcd9PcsCode1">
+							<c:forEach items="${otherIcd9Pcs}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd9PcsCode2"></select>
+					<select name="otherIcd9PcsCode2">
+							<c:forEach items="${otherIcd9Pcs}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd9PcsCode3"></select>
+					<select name="otherIcd9PcsCode3">
+							<c:forEach items="${otherIcd9Pcs}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 			</table></td>
 	
 			<td><table>
 				<tr><td>
-					<select name="icd10AdmittingDxCode"></select>
+					<select name="icd10AdmittingDxCode">
+							<c:forEach items="${icd10AdmittingDx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd10PrincipalDxCode"></select>
+					<select name="icd10PrincipalDxCode">
+							<c:forEach items="${icd10PrincipalDx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd10PrincipalProcCode"></select>
+					<select name="icd10PrincipalProcCode">
+							<c:forEach items="${icd10PrincipalProcedure}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd10DxCode1"></select>
+					<select name="otherIcd10DxCode1">
+							<c:forEach items="${otherIcd10Dx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd10DxCode2"></select>
+					<select name="otherIcd10DxCode2">
+							<c:forEach items="${otherIcd10Dx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd10DxCode3"></select>
+					<select name="otherIcd10DxCode3">
+							<c:forEach items="${otherIcd10Dx}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd10PcsCode1"></select>
+					<select name="otherIcd10PcsCode1">
+							<c:forEach items="${otherIcd10Pcs}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd10PcsCode2"></select>
+					<select name="otherIcd10PcsCode2">
+							<c:forEach items="${otherIcd10Pcs}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="otherIcd10PcsCode3"></select>
+					<select name="otherIcd10PcsCode3">
+							<c:forEach items="${otherIcd10Pcs}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 			</table></td>
 	

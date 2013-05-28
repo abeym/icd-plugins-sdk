@@ -87,9 +87,9 @@
 					<table>
 						<tr>
 							<td><select multiple="multiple" name="top5HealthPlansByRev">
-									<c:forEach items="${top5byrev}" var="revItem">
-										<option value="<c:out value="${revItem.key}"/>">
-											<c:out value="${revItem.value} " />
+									<c:forEach items="${top5byrev}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
 										</option>
 									</c:forEach>									
 							</select>
@@ -97,15 +97,33 @@
 							</td>
 						</tr>
 						<tr>
-							<td><select multiple="multiple" name="clearinghouses"></select>
+							<td><select multiple="multiple" name="clearinghouses">
+									<c:forEach items="${clearinghouses}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+									</c:forEach>	
+							</select>
 							</td>
 						</tr>
 						<tr>
-							<td><select multiple="multiple" name="ehrBillingVendors"></select>
+							<td><select multiple="multiple" name="ehrBillingVendors">
+									<c:forEach items="${ehrAndBillingVendors}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+									</c:forEach>	
+							</select>
 							</td>
 						</tr>
 						<tr>
-							<td><select multiple="multiple" name="revCycleVendors"></select>
+							<td><select multiple="multiple" name="revCycleVendors">
+									<c:forEach items="${revCycleVendors}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+									</c:forEach>	
+							</select>
 							</td>
 						</tr>
 					</table>

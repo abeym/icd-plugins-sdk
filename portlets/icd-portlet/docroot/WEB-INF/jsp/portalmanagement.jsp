@@ -46,7 +46,12 @@ $(document).ready(function(){
 					<input type="text" name="currentTestingState" title="${vcurrentTestingState}">
 				</td></tr>
 				<tr><td>
-					<select name="changeTeestingState">
+					<select name="changeTestingState">
+							<c:forEach items="${testingStates}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
 					</select>
 				</td></tr>
 				<tr><td>
@@ -71,58 +76,154 @@ $(document).ready(function(){
 	
 			<td><table>
 				<tr><td>
-					<select name="icd9AdmittingDxControl"></select>
+					<select name="icd9AdmittingDxControl">
+							<c:forEach items="${icd9AdmittingDxControl}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd9PrincipalDxControl"></select>
+					<select name="icd9PrincipalDxControl">
+							<c:forEach items="${icd9PrincipalDxControl}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd9PrincipalProcControl"></select>
+					<select name="icd9PrincipalProcControl">
+							<c:forEach items="${icd9PrincipalPcsControl}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 			</table></td>
 	
 			<td><table>
 				<tr><td>
-					<select name="icd10AdmittingDxPattern1"></select>
+					<select name="icd10AdmittingDxPattern1">
+							<c:forEach items="${icd10AdmittingDxPattern1}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd10AdmittingDxPattern2"></select>
+					<select name="icd10AdmittingDxPattern2">
+							<c:forEach items="${icd10AdmittingDxPattern2}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="icd10AdmittingDxPattern3"></select>
-				</td></tr>
-
-				<tr><td>
-					<select name="icd10PrincipalDxPattern1"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalDxPattern2"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalDxPattern3"></select>
-				</td></tr>
-
-				<tr><td>
-					<select name="icd10PrincipalPcsPattern1"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalPcsPattern2"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalPcsPattern3"></select>
+					<select name="icd10AdmittingDxPattern3">
+							<c:forEach items="${icd10AdmittingDxPattern3}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 
 				<tr><td>
-					<select name="codingAccuracy"></select>
+					<select name="icd10PrincipalDxPattern1">
+							<c:forEach items="${icd10PrincipalDxPattern1}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="codingProficiency"></select>
+					<select name="icd10PrincipalDxPattern2">
+							<c:forEach items="${icd10PrincipalDxPattern2}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="clearinghouseAccuracy"></select>
+					<select name="icd10PrincipalDxPattern3">
+							<c:forEach items="${icd10PrincipalDxPattern3}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
+				</td></tr>
+
+				<tr><td>
+					<select name="icd9PrincipalPcsPattern1">
+							<c:forEach items="${icd9PrincipalPcsPattern1}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 				<tr><td>
-					<select name="adjudicationRate"></select>
+					<select name="icd9PrincipalPcsPattern2">
+							<c:forEach items="${icd9PrincipalPcsPattern2}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
+				</td></tr>
+				<tr><td>
+					<select name="icd9PrincipalPcsPattern3">
+							<c:forEach items="${icd9PrincipalPcsPattern3}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
+				</td></tr>
+
+				<tr><td>
+					<select name="codingAccuracy">
+							<c:forEach items="${codingAccuracy}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
+				</td></tr>
+				<tr><td>
+					<select name="codingProficiency">
+							<c:forEach items="${codingProficiency}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
+				</td></tr>
+				<tr><td>
+					<select name="clearinghouseAccuracy">
+							<c:forEach items="${clearingHouseAccuracy}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
+				</td></tr>
+				<tr><td>
+					<select name="adjudicationRate">
+							<c:forEach items="${adjudicationRate}" var="refItem">
+										<option value="<c:out value="${refItem.key}"/>">
+											<c:out value="${refItem.value} " />
+										</option>
+							</c:forEach>	
+					</select>
 				</td></tr>
 		</tr>
 
