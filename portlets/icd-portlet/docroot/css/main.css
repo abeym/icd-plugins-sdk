@@ -1,44 +1,10 @@
-/* CSS Document */
+/* banner */
+#banner{ width:960px; margin:auto; background-color:#FFFFFF; }
 
-
-#footer{
-	padding:15px 0 15px 0;
-	text-align:center;
-	font-size: 12px;
-	width:960px;
-	margin:auto;
-	position: relative;
-}
-
-#banner{
-	background-color:#FFFFFF;
-}
-
-#banner .bannerwraper{
-	width:960px;
-	margin:auto;
-	border-top:1.5px solid #CCCCCC;
-	 border-left:1.5px solid #CCCCCC;
-	 border-right:1.5px solid #CCCCCC;
- 	border-bottom:1.5px solid #CCCCCC;
-}
-#menubar .menubarwraper{	
-	background-repeat: repeat-x;
-	background-position: left center;
-	 margin:auto;
-	 width:960px;
-	 height:50px;
-	 border-top:1.5px solid #CCCCCC;
-	 border-left:1.5px solid #CCCCCC;
-	 border-right:1.5px solid #CCCCCC;
- 	border-bottom:1.5px solid #CCCCCC;
-}
-
-#menubar ul{
-	
+/* menu bar */
+#menubar .menubarwraper{ background-repeat: repeat-x; background-position: left center; margin:auto; width:960px; height:50px; border:1.5px solid #CCCCCC;
 	
 }
-
 #menubar ul li{
 	float:left; 
 	padding:5px 10px 5px 10px;
@@ -48,12 +14,12 @@
 	 font-size:15px;
 }
 
+/* page content */
 #page_container{
 	width: 960px;
 	margin: 0 auto;
-	margin-top: 0px;
 	text-align: left;
-	padding: 0;
+	padding:0px;
 	padding-bottom:1px;
 	overflow: visible;
 	background-color:#FFFFFF;
@@ -61,61 +27,53 @@
 	border-right: 1px solid #D6DFEE;
 	border-bottom: 1px solid #D6DFEE;
 	position: relative;
+	font-family: Arial, Verdana, sans-serif;
+	font-size:13px;
 }
+.padding_le_10{ padding-left:10px;}
+.marginbottom_10{ margin-bottom:10px;}
 
-#content_top{
-}
-#content_top .classLeft{
-float: left;
+/* table */
+#page_container table td{ vertical-align:top;}
+#page_container table{ padding-right:15px;}
+/* element styles */
+#page_container h1, #page_container h2{ padding-left:10px;}
+#page_container h2{ font-size:18px; color:#3A70BE; margin:0; font-weight:normal;}
+#page_container .select_box, #page_container .input_box, #page_container .select_multiple, #page_container .textarea{ border:1px solid #1B7AE0; margin-bottom:5px;}
 
-}
-#content_top .classMiddle{
-float: left;
-}
-#content_top .classRight{
-float: left;
-}
-#content_top .classRightRepeat{
-float: left;
-}
+#page_container .select_box{ width:99%;}
+#page_container .input_box{ width:98%;}
+#page_container .select_multiple{ width:98%;}
+#page_container .textarea{ width:98%;}
+/* buttons */
+.button_wrapper{ background-color:#EAEAEA; margin:0 0 10px 10px; padding:10px;}
+.button{ background-color:#3C6BA6; border:1px solid #1B7AE0; color:#fff;}
+.button_gry{ background-color:#999; border:1px solid #999; color:#fff;}
+.btn_right{ float:right;}
 
-.clearfix {
-   clear: both;
-   font-size:0px;
-   height:0px;
-   width:0px;
-   padding:0px;
-   margin:0px;   
-}
+.file_field{  border:1px solid #1B7AE0;}
+.clearfix {	clear:both; font-size:0px; height:0px; width:0px; padding:0px; margin:0px;}
+.h_line{ clear:both; font-size:0px; height:1px; padding:0px; margin:0 10px 3px 10px; border-bottom:1px solid #ccc;}
+.search{ width:90% !important; background-image:url(../images/search.gif); background-position:4px 4px; background-repeat:no-repeat; height:23px; padding-left:23px;}
+/* content columns */
+#page_container .ex_small_col{ float:left; margin:0 5px 0 0; width:147px; position:relative;}
+#page_container .small_col{ float:left; margin:5px 0 5px 10px; width:305px; position:relative;}
+#page_container .medium_col{float:left; margin:5px 0 5px 10px; width:460px; position:relative;}
+#page_container .ex_medium_col{float:left; margin:5px 0 5px 10px; width:620px; position:relative;}
+#page_container .large_col{width:950px; position:relative;}
 
+.section{}
 
-#content_middle{
+#footer
+{ background-color: #FFFFFF;
+    border-top: 1px solid #CCCCCC;
+    bottom: auto;
+    clear: both;
+    font-size: 12px;
+    margin: auto;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+    width: 960px;
+	
 }
-#content_middle .section{
-float: left;
-}
-#content_middle .sectionTwo{
-float: left;
-}
-#content_middle	.sectionThree{
-float: left;
-}
-#content_bottom{
-}
-#content_bottom .button_section{
-float: left;
-}
-
-div.buttion_type1{
-	float:left;
-	margin: 10px 0 0 0;
-}
-div.buttion_type2{
-	float:right;
-	margin: 10px 0 0 0;
-}
-
-.button{
-}
-
-
