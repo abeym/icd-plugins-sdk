@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="page_container">
-  <h1>Healthplan Page</h1>
+ 
   <div class="section">
    
     <div class="ex_medium_col">

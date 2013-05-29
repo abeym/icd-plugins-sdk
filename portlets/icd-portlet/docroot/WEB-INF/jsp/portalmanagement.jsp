@@ -21,9 +21,6 @@
 <div id="page_container">
 		<form method="post" action="<portlet:actionURL/>"
 			enctype="multipart/form-data">
-			<h1>
-				<spring:message code="portalmanagement.title" />
-			</h1>
 			<div class="section">
 				<div class="small_col">
 					<select name="selectedPortalUser" class="select_box" title="Select portal user">

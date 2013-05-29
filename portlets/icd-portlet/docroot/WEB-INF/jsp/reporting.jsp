@@ -24,9 +24,6 @@
 	<div id="page_container">
 		<form method="post" action="<portlet:actionURL/>"
 			enctype="multipart/form-data">
-			<h1>
-				<spring:message code="reporting.title" />
-			</h1>
 			<div class="section">
 				<div class="ex_medium_col">
 					<h2>Welcome</h2>

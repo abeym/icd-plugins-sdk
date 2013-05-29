@@ -21,9 +21,6 @@
 <body>
 
 	<div id="page_container">
-		<h1>
-			<spring:message code="mradmin.title" />
-		</h1>
 		<form method="post" action="<portlet:actionURL/>"
 			enctype="multipart/form-data">
 			<div class="section">
