@@ -64,14 +64,14 @@
 				</div>
 				<div class="small_col">
 					<select multiple="multiple" name="top5HealthPlansByRev"
-						class="select_multiple" size="3">
+						class="select_multiple" size="3" title="top5HealthPlansByRev">
 								<c:forEach items="${top5byrev}" var="refItem">
 										<option value="<c:out value="${refItem.key}"/>">
 											<c:out value="${refItem.value} " />
 										</option>
 									</c:forEach>						
 					</select> <select multiple="multiple" name="clearinghouses"
-						class="select_multiple" size="3">
+						class="select_multiple" size="3" title="clearinghouses">
 									<c:forEach items="${clearinghouses}" var="refItem">
 										<option value="<c:out value="${refItem.key}"/>">
 											<c:out value="${refItem.value} " />
@@ -79,7 +79,7 @@
 									</c:forEach>	
 
 					</select> <select multiple="multiple" name="ehrBillingVendors" size="3"
-						class="select_multiple">
+						class="select_multiple" title="ehrBillingVendors">
 									<c:forEach items="${ehrAndBillingVendors}" var="refItem">
 										<option value="<c:out value="${refItem.key}"/>">
 											<c:out value="${refItem.value} " />
@@ -87,7 +87,7 @@
 									</c:forEach>	
 						
 					</select> <select multiple="multiple" name="revCycleVendors" size="3"
-						class="select_multiple">
+						class="select_multiple" title="revCycleVendors">
 									<c:forEach items="${revCycleVendors}" var="refItem">
 										<option value="<c:out value="${refItem.key}"/>">
 											<c:out value="${refItem.value} " />
@@ -99,7 +99,7 @@
 				<div class="small_col">
 					<div class="ex_small_col">
 
-						<textarea rows="3" cols="5" name="top5DrgByRev" class="textarea"></textarea>
+						<textarea rows="3" cols="5" name="top5DrgByRev" class="textarea" title="top5DrgByRev"></textarea>
 						<spring:message code="enrollment.icd9Drg1" var="vicd9Drg1" />
 						<input type="text" name="icd9Drg1" title="${vicd9Drg1}" size="25"
 							class="input_box">
@@ -119,7 +119,7 @@
 
 					</div>
 					<div class="ex_small_col">
-						<textarea rows="3" cols="5" name="top5Icd9ByRev" class="textarea"></textarea>
+						<textarea rows="3" cols="5" name="top5Icd9ByRev" class="textarea" title="top5Icd9ByRev"></textarea>
 						<spring:message code="enrollment.icd9Dx1" var="vicd9Dx1" />
 						<input type="text" name="icd9Dx1" title="${vicd9Dx1}" size="25"
 							class="input_box">
