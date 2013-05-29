@@ -32,6 +32,7 @@
 }
 .padding_le_10{ padding-left:10px;}
 .marginbottom_10{ margin-bottom:10px;}
+.margin_left_non_r10{ margin-left:0 !important; margin-right:0 !important;}
 
 /* table */
 #page_container table td{ vertical-align:top;}
@@ -39,6 +40,7 @@
 /* element styles */
 #page_container h1, #page_container h2{ padding-left:10px;}
 #page_container h2{ font-size:18px; color:#3A70BE; margin:0; font-weight:normal;}
+#page_container h3{ font-size:14px; color:#fff; margin:0; font-weight:normal;}
 #page_container .select_box, #page_container .input_box, #page_container .select_multiple, #page_container .textarea{ border:1px solid #1B7AE0; margin-bottom:5px;}
 
 #page_container .select_box{ width:99%;}
@@ -55,6 +57,11 @@
 .clearfix {	clear:both; font-size:0px; height:0px; width:0px; padding:0px; margin:0px;}
 .h_line{ clear:both; font-size:0px; height:1px; padding:0px; margin:0 10px 3px 10px; border-bottom:1px solid #ccc;}
 .search{ width:90% !important; background-image:url(../images/search.gif); background-position:4px 4px; background-repeat:no-repeat; height:23px; padding-left:23px;}
+.pt_wrapper{ background-color:#E3E3E3; padding:5px; font-size:12px; color:#fff; margin-top:5px;}
+.progress{ background-color:#7CB7F7; border:1px solid #255E9C; margin-bottom:3px; width:300px; text-align:right; padding-right:10px;}
+.timer{ background-color:#7CB7F7; border:1px solid #255E9C;text-align:right; padding-right:10px;}
+.subheader{background-color:#7CB7F7; color:#fff; padding:3px; width:290px;}
+
 /* content columns */
 #page_container .ex_small_col{ float:left; margin:0 5px 0 0; width:147px; position:relative;}
 #page_container .small_col{ float:left; margin:5px 0 5px 10px; width:305px; position:relative;}
