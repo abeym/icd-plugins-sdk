@@ -1,253 +1,214 @@
-<%@ include file="/WEB-INF/jsp/include.jsp" %>
+<%@ include file="/WEB-INF/jsp/include.jsp"%>
 
-<h1><spring:message code="portalmanagement.title"/></h1>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"
+	type="text/css">
+
 <script type="text/javascript"
-src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-<script type="text/javascript" 
-src="<%=request.getContextPath()%>/js/jquery.labelify.js"></script>
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/js/jquery.labelify.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-  $(":text").labelify();
-});
+	$(document).ready(function() {
+		$(":text").labelify();
+	});
 </script>
 
+</head>
+<body>
 
-<form method="post" action="<portlet:actionURL/>" enctype="multipart/form-data">
+	<div id="page_container">
+		<form method="post" action="<portlet:actionURL/>"
+			enctype="multipart/form-data">
+			<div class="section">
+				<div class="ex_medium_col">
+					<h2>Welcome</h2>
+				</div>
+				<div class="small_col">
+					<input type="text" name="searchMedicalRecords"
+						title="search Medical Records" size="27" class="input_box search"
+						value="Search Medical Records">
+				</div>
+			</div>
+			<div class="section">
+				<div class="small_col">
+					<select name="selectedEntityType" class="select_box">
+						<c:forEach items="${entityTypes}" var="entityType">
+							<option value="<c:out value="${entityType.key}"/>">
+								<c:out value="${entityType.value} " />
+							</option>
+						</c:forEach>
+					</select> <label for="enrollmentReport"> <spring:message
+							code="reporting.enrollmentReport" var="venrollmentReport" /> <input
+						type="checkbox" name="enrollmentReport" value="checkbox"
+						id="CheckboxGroup1_0" title="${venrollmentReport}"> <spring:message
+							code="reporting.enrollmentReport" /> </label><br> <label
+						for="mrStatus"> <spring:message code="reporting.mrStatus"
+							var="vmrStatus" /> <input type="checkbox" name="mrStatus"
+						value="checkbox" id="CheckboxGroup1_1" title="${vmrStatus}">
+						<spring:message code="reporting.mrStatus" /> </label> <br> <label
+						for="icd10CodingAccuracy"> <spring:message
+							code="reporting.icd10CodingAccuracy" var="vicd10CodingAccuracy" />
+						<input type="checkbox" name="icd10CodingAccuracy" value="checkbox"
+						id="CheckboxGroup1_2" title="${vicd10CodingAccuracy}"> <spring:message
+							code="reporting.icd10CodingAccuracy" /> </label> <br> <label
+						for="icd10CodingPatterns"> <spring:message
+							code="reporting.icd10CodingPatterns" var="vicd10CodingPatterns" />
+						<input type="checkbox" name="icd10CodingPatterns" value="checkbox"
+						id="CheckboxGroup1_3" title="${vicd10CodingPatterns}"> <spring:message
+							code="reporting.icd10CodingPatterns" /> </label> <br>
 
-
-	<table>
-		<tr>
-			<td><table>
-				<tr>
-					<td>
-						<select name="selectedEntityType">
-							<c:forEach items="${entityTypes}" var="entityType">
-								<option value="<c:out value="${entityType.key}"/>">
-						    		<c:out value="${entityType.value} "/>
-								</option>
-							</c:forEach>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.enrollmentReport" var="venrollmentReport"/>
-						<input type="checkbox" name="enrollmentReport" title="${venrollmentReport}"> <label for="enrollmentReport"><spring:message code="reporting.enrollmentReport"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.mrStatus" var="vmrStatus"/>
-						<input type="checkbox" name="mrStatus" title="${vmrStatus}"> <label for="mrStatus"><spring:message code="reporting.mrStatus"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.icd10CodingAccuracy" var="vicd10CodingAccuracy"/>
-						<input type="checkbox" name="icd10CodingAccuracy" title="${vicd10CodingAccuracy}"> <label for="icd10CodingAccuracy"><spring:message code="reporting.icd10CodingAccuracy"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.icd10CodingPatterns" var="vicd10CodingPatterns"/>
-						<input type="checkbox" name="icd10CodingPatterns" title="${vicd10CodingPatterns}"> <label for="icd10CodingPatterns"><spring:message code="reporting.icd10CodingPatterns"/></label>
-					</td>
-				</tr>
-			</table></td>
-
-			<td><table>
-				<tr>
-					<td>
-						<select name="selectedEntity">
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.testingStatus" var="vtestingStatus"/>
-						<input type="checkbox" name="testingStatus" title="${vtestingStatus}"> <label for="testingStatus"><spring:message code="reporting.testingStatus"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.5010Compliance" var="v5010Compliance"/>
-						<input type="checkbox" name="5010Compliance" title="${v5010Compliance}"> <label for="5010Compliance"><spring:message code="reporting.5010Compliance"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.adjudicationRate" var="vadjudicationRate"/>
-						<input type="checkbox" name="adjudicationRate" title="${vadjudicationRate}"> <label for="adjudicationRate"><spring:message code="reporting.adjudicationRate"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.remittanceAccuracy" var="vremittanceAccuracy"/>
-						<input type="checkbox" name="remittanceAccuracy" title="${vremittanceAccuracy}"> <label for="remittanceAccuracy"><spring:message code="reporting.remittanceAccuracy"/></label>
-					</td>
-				</tr>
-			</table></td>
+				</div>
 
 
-			<td><table>
-				<tr>
-					<td>
-						<spring:message code="reporting.selectedReportsToDownload" var="vselectedReportsToDownload"/>
-						<input type="text" name="selectedReportsToDownload" title="${vselectedReportsToDownload}">
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.icd10TestingProjectOverview" var="vicd10TestingProjectOverview"/>
-						<input type="checkbox" name="icd10TestingProjectOverview" title="${vicd10TestingProjectOverview}"> <label for="icd10TestingProjectOverview"><spring:message code="reporting.icd10TestingProjectOverview"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.icd10CodingRevision" var="vicd10CodingRevision"/>
-						<input type="checkbox" name="icd10CodingRevision" title="${vicd10CodingRevision}"> <label for="icd10CodingRevision"><spring:message code="reporting.icd10CodingRevision"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.adjudicationRate" var="vadjudicationRate"/>
-						<input type="checkbox" name="adjudicationRate" title="${vadjudicationRate}"> <label for="adjudicationRate"><spring:message code="reporting.adjudicationRate"/></label>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<spring:message code="reporting.remittanceAccuracy" var="vremittanceAccuracy"/>
-						<input type="checkbox" name="remittanceAccuracy" title="${vremittanceAccuracy}"> <label for="remittanceAccuracy"><spring:message code="reporting.remittanceAccuracy"/></label>
-					</td>
-				</tr>
-			</table></td>
+				<div class="small_col">
 
 
-		</tr>
+					<select name="selectedEntity" class="select_box">
+						<option>Select Entity</option>
+					</select> <label for="testingStatus"> <spring:message
+							code="reporting.testingStatus" var="vtestingStatus" /> <input
+						type="checkbox" name="testingStatus" value="checkbox"
+						id="CheckboxGroup1_0" title="${vtestingStatus}"> <spring:message
+							code="reporting.testingStatus" /> </label> <br> <label
+						for="5010Compliance"> <spring:message
+							code="reporting.5010Compliance" var="v5010Compliance" /> <input
+						type="checkbox" name="5010Compliance" value="checkbox"
+						id="CheckboxGroup1_1" title="${v5010Compliance}"> <spring:message
+							code="reporting.5010Compliance" />
+					</label> <br> <label for="adjudicationRate"> <spring:message
+							code="reporting.adjudicationRate" var="vadjudicationRate" /> <input
+						type="checkbox" name="adjudicationRate" value="checkbox"
+						id="CheckboxGroup1_2" title="${vadjudicationRate}"> <spring:message
+							code="reporting.adjudicationRate" />
+					</label> <br> <label for="remittanceAccuracy"> <spring:message
+							code="reporting.remittanceAccuracy" var="vremittanceAccuracy" />
+						<input type="checkbox" name="remittanceAccuracy" value="checkbox"
+						id="CheckboxGroup1_3" title="${vremittanceAccuracy}"> <spring:message
+							code="reporting.remittanceAccuracy" /> </label> <br>
+
+				</div>
+				<div class="small_col">
+
+					<spring:message code="reporting.selectedReportsToDownload"
+						var="vselectedReportsToDownload" />
+					<input type="text" name="selectedReportsToDownload"
+						title="${vselectedReportsToDownload}" class="select_box">
+
+					<label for="icd10TestingProjectOverview"> <spring:message
+							code="reporting.icd10TestingProjectOverview"
+							var="vicd10TestingProjectOverview" /> <input type="checkbox"
+						name="icd10TestingProjectOverview" value="checkbox"
+						id="CheckboxGroup1_0" title="${vicd10TestingProjectOverview}">
+						<spring:message code="reporting.icd10TestingProjectOverview" />
+					</label> <br> <label for="icd10CodingRevision"> <spring:message
+							code="reporting.icd10CodingRevision" var="vicd10CodingRevision" />
+						<input type="checkbox" name="icd10CodingRevision" value="checkbox"
+						id="CheckboxGroup1_1" title="${vicd10CodingRevision}"> <spring:message
+							code="reporting.icd10CodingRevision" /> </label> <br> <label
+						for="adjudicationRate"> <spring:message
+							code="reporting.adjudicationRate" var="vadjudicationRate" /> <input
+						type="checkbox" name="adjudicationRate" value="checkbox"
+						id="CheckboxGroup1_2" title="${vadjudicationRate}"> <spring:message
+							code="reporting.adjudicationRate" />
+					</label> <br> <label for="remittanceAccuracy"> <spring:message
+							code="reporting.remittanceAccuracy" var="vremittanceAccuracy" />
+						<input type="checkbox" name="remittanceAccuracy" value="checkbox"
+						id="CheckboxGroup1_3" title="${vremittanceAccuracy}">
+					<spring:message code="reporting.remittanceAccuracy" />
+					</label> <br> <br> <input type="button"
+						value="Download Testing Reports" class="btn_right button"
+						onClick="">
+
+				</div>
+			</div>
+			<div class="h_line"></div>
 
 
+			<div class="section">
+				<div class="large_col">
+					<div class="medium_col">
+						<input type="text" name="nationalICD10TestingMetrics"
+							value="National ICD-10 Testing Metrics"
+							title="National ICD-10 Testing Metrics" size="27"
+							class="input_box">
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="medium_col">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<tr>
-			<td><table>
-				<tr><td>
-					<select name="selectedPortalUser">
+					<select name="codingAccuracyAHRQCategoryCode" class="select_box">
+						<option>Coding Accuracy by AHRQ Category Code</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="codingAccuracyAHRQSubCategoryCode"
+						class="select_box">
+						<option>Coding Accuracy by AHRQ Sub-Category Code</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="codingPatternsAHRQCategoryCode" class="select_box">
+						<option>Coding Patterns by AHRQ Category Code</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="codingPatternsAHRQSubCategoryCode"
+						class="select_box">
+						<option>Coding Patterns by AHRQ Sub-Category Code</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="userDefinedReport" class="select_box">
+						<option>User-Defined Report</option>
+						<option>opt1</option>
+						<option>opt2</option>
 					</select>
-				</td></tr>
-				<tr><td>
-					<select name="selectedMedicalRecordId">
-					</select>
-				</td></tr>
-				<tr><td>
-					<spring:message code="reporting.currentTestingState" var="vcurrentTestingState"/>
-					<input type="text" name="currentTestingState" title="${vcurrentTestingState}">
-				</td></tr>
-				<tr><td>
-					<select name="changeTeestingState">
-					</select>
-				</td></tr>
-				<tr><td>
-					<textarea rows="3" cols="5" name="testingStateChangeNotes"></textarea>
-				</td></tr>
-				<tr><td>
-					<button type="button"><spring:message code="button.cancel"/></button>
-					<button type="button"><spring:message code="button.submitChange"/></button>
-				</td></tr>
+				</div>
 
-				<tr><td>
-					<button type="button"><spring:message code="portalmanagement.createDashboardData"/></button>
-				</td></tr>
-				<tr><td>
-					<button type="button"><spring:message code="portalmanagement.uploadDashboardData"/></button>
-				</td></tr>
-				<tr><td>
-					<button type="button"><spring:message code="reporting.csvBulkUpload"/></button>
-				</td></tr>
-			</table></td>
-	
-	
-			<td><table>
-				<tr><td>
-					<select name="icd9AdmittingDxControl"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd9PrincipalDxControl"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd9PrincipalProcControl"></select>
-				</td></tr>
-			</table></td>
-	
-			<td><table>
-				<tr><td>
-					<select name="icd10AdmittingDxPattern1"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10AdmittingDxPattern2"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10AdmittingDxPattern3"></select>
-				</td></tr>
-
-				<tr><td>
-					<select name="icd10PrincipalDxPattern1"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalDxPattern2"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalDxPattern3"></select>
-				</td></tr>
-
-				<tr><td>
-					<select name="icd10PrincipalPcsPattern1"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalPcsPattern2"></select>
-				</td></tr>
-				<tr><td>
-					<select name="icd10PrincipalPcsPattern3"></select>
-				</td></tr>
-
-				<tr><td>
-					<select name="codingAccuracy"></select>
-				</td></tr>
-				<tr><td>
-					<select name="codingProficiency"></select>
-				</td></tr>
-				<tr><td>
-					<select name="clearinghouseAccuracy"></select>
-				</td></tr>
-				<tr><td>
-					<select name="adjudicationRate"></select>
-				</td></tr>
-		</tr>
-
-	</table>
-	
-	
-</form>
+				<div class="medium_col">
+					<select name="testingAccuracyByMedicalSpeciality"
+						class="select_box">
+						<option>Testing Accuracy By Medical Speciality</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="ICD10CollaborativeTestingMetrics" class="select_box">
+						<option>ICD-10 Collaborative Testing Metrics</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="codingPatternsDRG" class="select_box">
+						<option>Coding Patterns by DRG</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="codingAccuracyDRG" class="select_box">
+						<option>Coding Accuracy by DRG</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <select name="userDefinedReport" class="select_box">
+						<option>User Defined Report</option>
+						<option>opt1</option>
+						<option>opt2</option>
+					</select> <input type="button" value="Download National Reports"
+						class="btn_right button" onClick="">
+				</div>
+			</div>
+			<div class="h_line"></div>
+			<div class="section">
+				<div class="large_col">
+					<div class="button_wrapper">
+						<input type="button" value="FAQ" class="btn_right button"
+							onClick="">
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- footer -->
+		<div class="clearfix"></div>
+		<div id="footer">
+			<span>Copyright 2013 Lott QA Group, Inc. All Rights Reserved
+				Visibiledi is a registered trademark </span>
+		</div>
+	</div>
+</body>
+</html>

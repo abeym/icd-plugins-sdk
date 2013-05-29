@@ -72,6 +72,8 @@ body {
 		margin: 0;
 
 		.logo {
+		width:75px !important;
+		height:59px !important;
 			padding: 10px 0;
 
 			&.default-logo img {
@@ -120,7 +122,9 @@ body {
 }
 
 /* -------- Navigation -------- */
-
+#navigation a:hover{
+ background-color: rgba(29, 96, 177, 0.3) !important;
+}
 #navigation {
 	display: block;
 	height: 50px;
