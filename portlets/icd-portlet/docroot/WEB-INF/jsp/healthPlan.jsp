@@ -6,21 +6,6 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div id="banner">
-  <div id="menubar">
-    <div class="menubarwraper">
-      <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Enrollment.html">Enrollment</a></li>
-        <li><a href="Document.html">Document</a></li>
-        <li><a href="Report.html">Report</a></li>
-        <li><a href="Support.html">Support</a></li>
-        <li><a href="Dashboard.html">Dashboard</a></li>
-        <li><a href="PMO.html">PMO</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 <div id="page_container">
   <h1>Healthplan Page</h1>
   <div class="section">

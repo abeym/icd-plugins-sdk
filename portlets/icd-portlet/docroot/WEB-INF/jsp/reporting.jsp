@@ -25,11 +25,11 @@
 		<form method="post" action="<portlet:actionURL/>"
 			enctype="multipart/form-data">
 			<h1>
-				<spring:message code="portalmanagement.title" />
+				<spring:message code="reporting.title" />
 			</h1>
 			<div class="section">
 				<div class="ex_medium_col">
-					<h2>Welcome "User ID Organization Name"</h2>
+					<h2>Welcome</h2>
 				</div>
 				<div class="small_col">
 					<input type="text" name="searchMedicalRecords"

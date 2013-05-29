@@ -27,6 +27,26 @@
    </portlet>
 
    <portlet>
+      <portlet-name>healthplan</portlet-name>
+      <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+      <init-param>
+         <name>contextConfigLocation</name>
+         <value>/WEB-INF/context/healthplan-portlet.xml</value>
+      </init-param>
+      <init-param>
+         <name>viewRendererUrl</name>
+         <value>/WEB-INF/servlet/view</value>
+      </init-param>
+      <supports>
+         <mime-type>text/html</mime-type>
+         <portlet-mode>view</portlet-mode>
+      </supports>
+      <portlet-info>
+         <title>Health Plan Portlet</title>
+      </portlet-info>
+   </portlet>
+
+   <portlet>
       <portlet-name>mradmin</portlet-name>
       <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
       <init-param>

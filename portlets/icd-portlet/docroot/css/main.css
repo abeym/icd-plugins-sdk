@@ -32,6 +32,7 @@
 }
 .padding_le_10{ padding-left:10px;}
 .marginbottom_10{ margin-bottom:10px;}
+.marginbottom_20{ margin-bottom:33px;}
 .margin_left_non_r10{ margin-left:0 !important; margin-right:0 !important;}
 
 /* table */
@@ -61,6 +62,7 @@
 .progress{ background-color:#7CB7F7; border:1px solid #255E9C; margin-bottom:3px; width:300px; text-align:right; padding-right:10px;}
 .timer{ background-color:#7CB7F7; border:1px solid #255E9C;text-align:right; padding-right:10px;}
 .subheader{background-color:#7CB7F7; color:#fff; padding:3px; width:290px;}
+.float_right{ float:right;}
 
 /* content columns */
 #page_container .ex_small_col{ float:left; margin:0 5px 0 0; width:147px; position:relative;}
