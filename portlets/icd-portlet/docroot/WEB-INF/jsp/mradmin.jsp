@@ -21,12 +21,15 @@
 <body>
 
 	<div id="page_container">
+		<h1>
+			<spring:message code="mradmin.title" />
+		</h1>
 		<form method="post" action="<portlet:actionURL/>"
 			enctype="multipart/form-data">
 			<div class="section">
 				<div class="small_col">
 					<div class="marginbottom_20"></div>
-					<select name="selectedEntityType" class="select_box">
+					<select name="selectedEntityType" class="select_box" title="EntityType">
 						<c:forEach items="${entityTypes}" var="entityType">
 							<option value="<c:out value="${entityType.key}"/>">
 								<c:out value="${entityType.value} " />
@@ -36,37 +39,37 @@
 					<spring:message code="mradmin.mrTestCaseNum" var="vmrTestCaseNum" />
 					<input type="text" name="mrTestCaseNum" title="${vmrTestCaseNum}"
 						size="27" class="input_box"> <select name="mrDrgNum"
-						class="select_box">
+						class="select_box" title="mrDrgNum">
 						<c:forEach items="${msDrg}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="patientType" class="select_box">
+					</select> <select name="patientType" class="select_box" title="patientType">
 						<c:forEach items="${patientType}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="patientAge" class="select_box">
+					</select> <select name="patientAge" class="select_box" title="patientAge">
 						<c:forEach items="${patientAge}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="los" class="select_box">
+					</select> <select name="los" class="select_box" title="los">
 						<c:forEach items="${los}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="ahrqCategoryCode" class="select_box">
+					</select> <select name="ahrqCategoryCode" class="select_box" title="ahrqCategoryCode">
 						<c:forEach items="${ahrqCategoryCode}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="ahrqSubCategoryCode" class="select_box">
+					</select> <select name="ahrqSubCategoryCode" class="select_box" title="ahrqSubCategoryCode">
 						<c:forEach items="${ahrqSubCategoryCode}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
@@ -85,55 +88,55 @@
 				</div>
 				<div class="small_col">
 					<div class="marginbottom_20"></div>
-					<select name="icd9AdmittingDxCode" class="select_box">
+					<select name="icd9AdmittingDxCode" class="select_box" title="icd9AdmittingDxCode">
 						<c:forEach items="${icd9AdmittingDx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="icd9PrincipalDxCode" class="select_box">
+					</select> <select name="icd9PrincipalDxCode" class="select_box" title="icd9PrincipalDxCode">
 						<c:forEach items="${icd9PrincipalDx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="icd9PrincipalProcCode" class="select_box">
+					</select> <select name="icd9PrincipalProcCode" class="select_box" title="icd9PrincipalProcCode">
 						<c:forEach items="${icd9PrincipalProcedure}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd9DxCode1" class="select_box">
+					</select> <select name="otherIcd9DxCode1" class="select_box" title="otherIcd9DxCode1">
 						<c:forEach items="${otherIcd9Dx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd9DxCode2" class="select_box">
+					</select> <select name="otherIcd9DxCode2" class="select_box" title="otherIcd9DxCode2">
 						<c:forEach items="${otherIcd9Dx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd9DxCode3" class="select_box">
+					</select> <select name="otherIcd9DxCode3" class="select_box" title="otherIcd9DxCode3">
 						<c:forEach items="${otherIcd9Dx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd9PcsCode1" class="select_box">
+					</select> <select name="otherIcd9PcsCode1" class="select_box" title="otherIcd9PcsCode1">
 						<c:forEach items="${otherIcd9Pcs}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd9PcsCode2" class="select_box">
+					</select> <select name="otherIcd9PcsCode2" class="select_box" title="otherIcd9PcsCode2">
 						<c:forEach items="${otherIcd9Pcs}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd9PcsCode3" class="select_box">
+					</select> <select name="otherIcd9PcsCode3" class="select_box" title="otherIcd9PcsCode3">
 						<c:forEach items="${otherIcd9Pcs}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
@@ -175,55 +178,55 @@
 					<input type="text" name="searchMedicalRecords"
 						title="search Medical Records" size="27" class="input_box search"
 						value="Search Medical Records"> <select
-						name="icd10AdmittingDxCode" class="select_box">
+						name="icd10AdmittingDxCode" class="select_box" title="icd10AdmittingDxCode"> 
 						<c:forEach items="${icd10AdmittingDx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="icd10PrincipalDxCode" class="select_box">
+					</select> <select name="icd10PrincipalDxCode" class="select_box" title="icd10PrincipalDxCode">
 						<c:forEach items="${icd10PrincipalDx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="icd10PrincipalProcCode" class="select_box">
+					</select> <select name="icd10PrincipalProcCode" class="select_box" title="icd10PrincipalProcCode">
 						<c:forEach items="${icd10PrincipalProcedure}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd10DxCode1" class="select_box">
+					</select> <select name="otherIcd10DxCode1" class="select_box" title="otherIcd10DxCode1">
 						<c:forEach items="${otherIcd10Dx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd10DxCode2" class="select_box">
+					</select> <select name="otherIcd10DxCode2" class="select_box" title="otherIcd10DxCode2">
 						<c:forEach items="${otherIcd10Dx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd10DxCode3" class="select_box">
+					</select> <select name="otherIcd10DxCode3" class="select_box" title="otherIcd10DxCode3">
 						<c:forEach items="${otherIcd10Dx}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd10PcsCode1" class="select_box">
+					</select> <select name="otherIcd10PcsCode1" class="select_box" title="otherIcd10PcsCode1">
 						<c:forEach items="${otherIcd10Pcs}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd10PcsCode2" class="select_box">
+					</select> <select name="otherIcd10PcsCode2" class="select_box" title="otherIcd10PcsCode2">
 						<c:forEach items="${otherIcd10Pcs}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
 							</option>
 						</c:forEach>
-					</select> <select name="otherIcd10PcsCode3" class="select_box">
+					</select> <select name="otherIcd10PcsCode3" class="select_box" title="otherIcd10PcsCode3">
 						<c:forEach items="${otherIcd10Pcs}" var="refItem">
 							<option value="<c:out value="${refItem.key}"/>">
 								<c:out value="${refItem.value} " />
