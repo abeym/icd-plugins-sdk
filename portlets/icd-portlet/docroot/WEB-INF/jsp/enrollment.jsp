@@ -11,9 +11,13 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 <script type="text/javascript"
 	src="<%=request.getContextPath()%>/js/jquery.labelify.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		$(":text").labelify();
+		
+		$('#pharmacyAtts :input').attr('disabled', true);
+		$('#providerAtts :input').attr('disabled', true);
 	});
 </script>
 <body>
@@ -25,7 +29,7 @@
 			<div class="section">
 				<div class="small_col">
 
-					<select name="selectedEntityType" class="select_box">
+					<select id="selectedEntityType" name="selectedEntityType" class="select_box">
 						<c:forEach items="${entityTypes}" var="entityType">
 							<option value="<c:out value="${entityType.key}"/>">
 								<c:out value="${entityType.value} " />
@@ -34,7 +38,7 @@
 					</select>
 					<spring:message code="enrollment.organizationNPINum"
 						var="vorganizationNPINum" />
-					<input type="text" name="organizationNPINum"
+					<input type="text" id="organizationNPINum" name="organizationNPINum"
 						title="${vorganizationNPINum}" size="27" class="input_box">
 					<spring:message code="enrollment.organizationName"
 						var="vorganizationName" />
@@ -139,7 +143,7 @@
 			</div>
 			<div class="h_line"></div>
 			<div class="section">
-				<div class="small_col">
+				<div class="small_col" id="insurerAtts">
 
 					<spring:message code="enrollment.primaryTestingContact"
 						var="vprimaryTestingContact" />
@@ -160,7 +164,7 @@
 
 
 				</div>
-				<div class="small_col">
+				<div class="small_col" id="pharmacyAtts">
 
 					<spring:message code="enrollment.primaryCodingContact"
 						var="vprimaryCodingContact" />
@@ -181,7 +185,7 @@
 
 
 				</div>
-				<div class="small_col">
+				<div class="small_col" id="providerAtts">
 					<spring:message code="enrollment.primaryBillingContact"
 						var="vprimaryBillingContact" />
 					<input type="text" name="primaryBillingContact"
@@ -234,3 +238,26 @@
 	</div>
 </body>
 </html>
+
+<script type="text/javascript">
+
+$('#selectedEntityType').change(function() {
+
+	if($('#selectedEntityType').val() == "Pharmacy"){
+		$('#insurerAtts :input').attr('disabled', true);
+		$('#pharmacyAtts :input').removeAttr('disabled');
+		$('#providerAtts :input').attr('disabled', true);
+	}
+	else if($('#selectedEntityType').val() == "Provider"){
+		$('#insurerAtts :input').attr('disabled', true);
+		$('#pharmacyAtts :input').attr('disabled', true);
+		$('#providerAtts :input').removeAttr('disabled');
+	}
+	else if($('#selectedEntityType').val() == "Insurer"){
+		$('#insurerAtts :input').removeAttr('disabled');
+		$('#pharmacyAtts :input').attr('disabled', true);
+		$('#providerAtts :input').attr('disabled', true);
+	}
+});
+
+</script>
